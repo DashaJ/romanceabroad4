@@ -1,10 +1,7 @@
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GiftsPage extends BaseUI {
-
-
 
     @Test
     public void testGiftsPage() {

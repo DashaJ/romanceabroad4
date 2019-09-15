@@ -17,7 +17,6 @@ public class BaseUI {
 
     @AfterMethod
     public void tearDown() {
-
         driver.quit();
     }
 

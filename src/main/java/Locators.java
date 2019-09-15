@@ -16,7 +16,7 @@ public class Locators {
     //Photos page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     //Search page
-    public static final By SEARCH_BUTTON_OnTheSearchWidget =By.cssSelector("#main_search_button_user_advanced");
+    public static final By SEARCH_BUTTON_OnTheSearchWidget = By.cssSelector("#main_search_button_user_advanced");
     public static final By LINK_SERACH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By GALLERY_VIEW = By.xpath("//a[@title='Gallery view']");
     public static final By NEWS_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-news-item']");
@@ -24,19 +24,17 @@ public class Locators {
     //Sign in Page
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
     public static final By FACEBOOK_LINK = By.xpath("//i[@class='fa fa-facebook-official']");
-
     //Registration page
     public static final By PAYPAL_LINK = By.xpath("//a[@class='btn btn-primary btn-block']");
     public static final By REGISTRATION_BUTTON = By.xpath("//button[@id='show-registration-block']");
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("input#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
     public static final By NEXT_BUTTON = By.xpath("//div[@class='col-xs-12']//button[@class='btn btn-primary btn-block btn-lg'][contains(text(),'Next')] ");
-public static final By USERNAME_FIELD = By.cssSelector("#nickname");
-public static final By PASSWORD_FIELD = By.xpath("//input[@name='data[phone]']");
-
-//Tours To Ukraine Page
+    public static final By USERNAME_FIELD = By.cssSelector("#nickname");
+    public static final By PASSWORD_FIELD = By.xpath("//input[@name='data[phone]']");
+    //Tours To Ukraine Page
     public static final By TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
     public static final By SEARCH_BUTTON_ON_TOURS_TO_UKRAINE_PAGE = By.cssSelector("button#search_friend");
     public static final By SEARCH_FIELD_ON_TOURS_TO_UKRAINE_PAGE = By.cssSelector("input#search_product");
-    public static final By RESULT_OF_THE_SEARCH= By.xpath("//div[@class='store-main-block']//h2");
+    public static final By RESULT_OF_THE_SEARCH = By.xpath("//div[@class='store-main-block']//h2");
 }

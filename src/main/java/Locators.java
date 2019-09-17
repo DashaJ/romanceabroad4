@@ -21,6 +21,7 @@ public class Locators {
     public static final By GALLERY_VIEW = By.xpath("//a[@title='Gallery view']");
     public static final By NEWS_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-news-item']");
     public static final By FLYOUT_MENU = By.xpath("//i[@class='fa fa-bars fa-lg item']");
+    //public static final By DROPDOWNLIST_SORT_BY = By.xpath("//div[@class='pull-left pl15']//select";
     //Sign in Page
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
     public static final By FACEBOOK_LINK = By.xpath("//i[@class='fa fa-facebook-official']");

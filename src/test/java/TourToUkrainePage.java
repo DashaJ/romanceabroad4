@@ -10,8 +10,9 @@ public class TourToUkrainePage extends BaseUI {
         driver.findElement(Locators.SEARCH_BUTTON_ON_TOURS_TO_UKRAINE_PAGE).click();
         String searchResult = driver.findElement(Locators.RESULT_OF_THE_SEARCH).getText();
         System.out.println(searchResult);
-        Assert.assertEquals("No items", searchResult);
         //Verify that User gets 'no items' result when performing search on a word "Test"
+        Assert.assertEquals("No items", searchResult);
+        driver.navigate().back();
         driver.findElement(Locators.PAYPAL_LINK).click();
     }
 }

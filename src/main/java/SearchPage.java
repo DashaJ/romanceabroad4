@@ -1,32 +1,31 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-public class SearchPage extends BaseUI {
 
-    @Test
-    public void testSearchPage() {
+public class SearchPage extends BaseActions {
+    public SearchPage(WebDriver driver, WebDriverWait wait){
+        super(driver, wait);
+    }
+    public void getToSearchPeoplePage(){
         driver.findElement(Locators.LINK_SERACH).click();
         String currentURLsearch = driver.getCurrentUrl();
         System.out.println(currentURLsearch);
         Assert.assertEquals(currentURLsearch, Data.expectedURLsearch);
+    }
+    public void clickOnGallery() {
         driver.findElement(Locators.GALLERY_VIEW).click();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    }
+    public void fillMinMaxAge (){
         getDropDownListByIndex(Locators.DROPDOWNLIST_AGE_MIN,0 );
         getDropDownListByIndex(Locators.DROPDOWNLIST_AGE_MAX, 15);
         driver.findElement(Locators.SEARCH_BUTTON_OnTheSearchWidget).click();
+    }
+    public void sortSearchResultsByIndex (){
         getDropDownListByIndex(Locators.DROPDOWNLIST_SORT_BY, 3);
-        //Fly-out menu
+    }
+    public void getToNews (){
         driver.findElement(Locators.FLYOUT_MENU).click();
         driver.findElement(Locators.NEWS_ON_THE_FLYOUT).click();
     }
-    public void getDropDownListByIndex(By locator, int index) {
-        Select select = new Select(driver.findElement(locator));
-        select.selectByIndex(index);
 
-    }
 }

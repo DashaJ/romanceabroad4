@@ -6,9 +6,11 @@ public class Locators {
     public static final By ODESSA_DATING_AGENCY_LINK = By.xpath("//div[@class='info-menu-inner']");
     //Gifts page
     public static final By GIFTS_LINK = By.xpath("//a[contains(text(),'GIFTS')]");
+    public static final By FLOWER_BASKET = By.xpath("//div[@class='text-overflow'][contains(text(),'Flower basket')]");
     //How we work page
     public static final By LINK_HOW_WE_WORK = By.cssSelector("a[href='https://romanceabroad.com/content/view/how-it-works']");
     public static final By ADVERTISING_LINK = By.xpath("//div[contains(text(),'Advertising')]");
+    public static final By LIST_OF_LINKS = By.xpath("//div[@class='inside account_menu']//li");
     //Main page
     public static final By SIGN_IN_OnNavBar = By.xpath("//ul[@class='navbar-nav']//li//a[@href='https://romanceabroad.com/users/login_form']");
     public static final By REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");

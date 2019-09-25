@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SignUpOnFlyOutTests extends BaseUI {
@@ -10,8 +11,13 @@ public class SignUpOnFlyOutTests extends BaseUI {
         //Dropdowns
         signuponflyoutpage.fillRegistartionInfoSecondStep();
         //Checkbox lates news and //Checkbox Terms and Conditions
-        signuponflyoutpage.checkboxesHandling();
+        WebElement checkboxConfirmationLatestNews = driver.findElement(Locators.CHECKBOX_LATEST_NEWS);
+        Assert.assertTrue(driver.findElement(Locators.CHECKBOX_LATEST_NEWS).isDisplayed());
+        checkboxConfirmationLatestNews.click();
 
+        WebElement checkboxConfirmationOnSignupPage = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+        Assert.assertTrue(!driver.findElement(Locators.CHECKBOX_CONFIRMATION).isSelected());
+        checkboxConfirmationOnSignupPage.click();
     }
 }
 

@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class SignUpOnFlyOutPage extends BaseActions {
     public SignUpOnFlyOutPage(WebDriver driver, WebDriverWait wait) {
@@ -26,17 +27,6 @@ public class SignUpOnFlyOutPage extends BaseActions {
         driver.findElement(Locators.PHONE_FIELD).sendKeys("727272727");
     }
 
-    public void checkboxesHandling() {
-        WebElement checkboxConfirmationLatestNews = driver.findElement(Locators.CHECKBOX_LATEST_NEWS);
-        boolean selectedCheckBox1 = checkboxConfirmationLatestNews.isSelected();
-        System.out.println(selectedCheckBox1 + "!!!");
-        checkboxConfirmationLatestNews.click();
-        WebElement checkboxConfirmationOnSignupPage = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-        boolean selectedCheckBox = checkboxConfirmationOnSignupPage.isSelected();
-        System.out.println(selectedCheckBox + "!!!");
-        checkboxConfirmationOnSignupPage.click();
-
-    }
 }
 
 

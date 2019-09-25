@@ -2,6 +2,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
@@ -31,9 +32,6 @@ public void completeSecondRegistartionStep(){
     driver.findElement(Locators.CLICK_ON_YEAR_FIELD).click();
     driver.findElement(Locators.YEAR_DATE).click();
     driver.findElement(Locators.PHONE).sendKeys(Data.phone);
-    WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-    boolean selectedCheckBox = checkboxConfirmation.isSelected();
-    System.out.println(selectedCheckBox + "!!!");
-    checkboxConfirmation.click();
+
 }
 }

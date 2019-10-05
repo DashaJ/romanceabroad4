@@ -15,18 +15,17 @@ public class BaseUI {
     String mainUrl = "https://romanceabroad.com/";
     WebDriverWait wait;
     WebDriver driver;
-    MainClass mainPage;
-    SearchPage searchpage;
-    BlogPage blogpage;
-    GiftsPage giftspage;
-    HowWeWorkPage howweworkpage;
-    PhotosPage photospage;
-    RegistartionPage registrationpage;
-    SignInPage signinpage;
-    SignUpOnFlyOutPage signuponflyoutpage;
-    TourToUkrainePage tourtoukrainepage;
+    MainPage mainPage;
+    SearchPage searchPage;
+    BlogPage blogPage;
+    GiftsPage giftsPage;
+    HowWeWorkPage howWeWorkPage;
+    PhotosPage photosPage;
+    RegistartionPage registrationPage;
+    SignInPage signInPage;
+    SignUpOnFlyOutPage signUpOnFlyOutPage;
+    TourToUkrainePage tourToUkrainePage;
     SoftAssert softAssert = new SoftAssert();
-
 
 
     @BeforeMethod
@@ -58,16 +57,16 @@ public class BaseUI {
         }
 
         wait =new WebDriverWait(driver, 20);
-        mainPage= new MainClass(driver, wait);
-        searchpage= new SearchPage(driver, wait);
-        blogpage = new BlogPage(driver, wait);
-        giftspage = new GiftsPage(driver, wait);
-        howweworkpage = new HowWeWorkPage(driver, wait);
-        photospage = new PhotosPage(driver, wait);
-        registrationpage = new RegistartionPage(driver, wait);
-        signinpage = new SignInPage(driver, wait);
-        signuponflyoutpage = new SignUpOnFlyOutPage(driver, wait);
-        tourtoukrainepage = new TourToUkrainePage(driver, wait);
+        mainPage= new MainPage(driver, wait);
+        searchPage= new SearchPage(driver, wait);
+        blogPage = new BlogPage(driver, wait);
+        giftsPage = new GiftsPage(driver, wait);
+        howWeWorkPage = new HowWeWorkPage(driver, wait);
+        photosPage = new PhotosPage(driver, wait);
+        registrationPage = new RegistartionPage(driver, wait);
+        signInPage = new SignInPage(driver, wait);
+        signUpOnFlyOutPage = new SignUpOnFlyOutPage(driver, wait);
+        tourToUkrainePage = new TourToUkrainePage(driver, wait);
 
         driver.manage().window().maximize();
         driver.get(mainUrl);

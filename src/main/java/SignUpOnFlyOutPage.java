@@ -21,9 +21,9 @@ public class SignUpOnFlyOutPage extends BaseActions {
     }
 
     public void fillRegistartionInfoSecondStep() {
-        getDropDownBirthDate(Locators.DROPDOWNLIST_BIRTH_DATE, "25");
-        getDropDownBirthMonth(Locators.DROPDOWNLIST_BIRTH_MONTH, 1);
-        getDropDownBirthYear(Locators.DROPDOWNLIST_BIRTH_YEAR, "1988");
+        getDropDownByValue(Locators.DROPDOWNLIST_BIRTH_DATE, "25");
+        getDropDownByIndex(Locators.DROPDOWNLIST_BIRTH_MONTH, 1);
+        getDropDownByText(Locators.DROPDOWNLIST_BIRTH_YEAR, "1988");
         driver.findElement(Locators.PHONE_FIELD).sendKeys("727272727");
     }
 

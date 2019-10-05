@@ -4,8 +4,8 @@ public class TourToUkraineTests extends BaseUI {
 
     @Test
     public void testTourToUkrainePage() {
-        tourtoukrainepage.getToTourToUkraine();
-        tourtoukrainepage.performSearchOnItemAndVerifyResult();
-        tourtoukrainepage.clickOnPaypal();
+        tourToUkrainePage.getToTourToUkraine();
+        tourToUkrainePage.performSearchOnItemAndVerifyResult();
+        tourToUkrainePage.clickOnPaypal();
     }
 }

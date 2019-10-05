@@ -4,6 +4,6 @@ public class SignInTests extends BaseUI {
 
     @Test
     public void testSignInPage() {
-        signinpage.logInUsingFacebook();
+        signInPage.logInUsingFacebook();
     }
 }

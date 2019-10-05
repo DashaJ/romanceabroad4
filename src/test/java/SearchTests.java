@@ -4,18 +4,18 @@ public class SearchTests extends BaseUI {
 
     @Test
     public void testSearchPage() {
-        searchpage.getToSearchPeoplePage();
+        searchPage.getToSearchPeoplePage();
 
-        searchpage.clickOnGallery();
+        searchPage.clickOnGallery();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        searchpage.fillMinMaxAge();
-        searchpage.sortSearchResultsByIndex();
+        searchPage.fillMinMaxAge();
+        searchPage.sortSearchResultsByIndex();
         //Fly-out menu
-        searchpage.getToNews();
+        searchPage.getToNews();
     }
 
 }

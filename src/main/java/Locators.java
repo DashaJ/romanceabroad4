@@ -8,12 +8,14 @@ public class Locators {
     public static final By GIFTS_LINK = By.xpath("//a[contains(text(),'GIFTS')]");
     public static final By FLOWER_BASKET = By.xpath("//div[@class='text-overflow'][contains(text(),'Flower basket')]");
     //How we work page
-    public static final By LINK_HOW_WE_WORK = By.cssSelector("a[href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By LINK_HOW_WE_WORK = By.xpath("//ul//a[contains(text(),'HOW WE WORK')]");
     public static final By ADVERTISING_LINK = By.xpath("//div[contains(text(),'Advertising')]");
-    public static final By LIST_OF_LINKS = By.xpath("//div[@class='inside account_menu']//li");
+    public static final By LIST_OF_LINKS = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
+    public static final By CAROUSEL_IMAGES = By.xpath("//div[contains(@class,'user-carousel-line')] ");
     //Main page
-    public static final By SIGN_IN_OnNavBar = By.xpath("//ul[@class='navbar-nav']//li//a[@href='https://romanceabroad.com/users/login_form']");
     public static final By REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
+    public static final By IFRAMELOCATOR = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+    public static final By YOUTUBE_BUTTON = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
     //Photos page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROPDOWN_SORT_BY_PHOTOS = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");

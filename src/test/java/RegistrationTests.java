@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 public class RegistrationTests extends BaseUI {
     @Test
-    public void RegistrationTest() {
-        registrationpage.clickjoinForFreeNow();
-        registrationpage.registrationFirstStep();
-        registrationpage.completeFirstRegistartionStep();
-        registrationpage.completeSecondRegistartionStep();
+    public void registrationTest() {
+        registrationPage.clickjoinForFreeNow();
+        registrationPage.registrationFirstStep();
+        registrationPage.completeFirstRegistartionStep();
+        registrationPage.completeSecondRegistartionStep();
         WebElement checkboxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
         if(!driver.findElement(Locators.CHECKBOX_CONFIRMATION).isSelected()){
             checkboxConfirmation.click();

@@ -6,10 +6,10 @@ public class SignUpOnFlyOutTests extends BaseUI {
 
     @Test
     public void testSignUpOnFlyOut() {
-        signuponflyoutpage.getTotheSignUp();
-        signuponflyoutpage.fillRegistrationInfoFirstStep();
+        signUpOnFlyOutPage.getTotheSignUp();
+        signUpOnFlyOutPage.fillRegistrationInfoFirstStep();
         //Dropdowns
-        signuponflyoutpage.fillRegistartionInfoSecondStep();
+        signUpOnFlyOutPage.fillRegistartionInfoSecondStep();
         //Checkbox lates news and //Checkbox Terms and Conditions
         WebElement checkboxConfirmationLatestNews = driver.findElement(Locators.CHECKBOX_LATEST_NEWS);
         Assert.assertTrue(driver.findElement(Locators.CHECKBOX_LATEST_NEWS).isDisplayed());

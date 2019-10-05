@@ -6,7 +6,7 @@ public class HowWeWorkPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void GetToHowWeWorkPage(){
+    public void getToHowWeWorkPage(){
         driver.findElement(Locators.LINK_HOW_WE_WORK).click();
     }
     public void advertisingLink(){

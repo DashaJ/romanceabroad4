@@ -7,12 +7,12 @@ public class BlogTests extends BaseUI {
 
     @Test
     public void testBlogPage() {
-        blogpage.GetToTheBlogPage();
+        blogPage.getToTheBlogPage();
         List<WebElement> BlogCategories = driver.findElements(By.xpath("//div[@class='info-content-block wysiwyg']//ul//li"));
         for (int i = 0; i < BlogCategories.size(); i++) {
             String numberOfLinks = BlogCategories.get(i).getText();
             System.out.println(numberOfLinks);
-            blogpage.clickOnOdessaDatingAgency();
+            blogPage.clickOnOdessaDatingAgency();
         }
     }
 }

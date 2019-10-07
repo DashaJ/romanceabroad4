@@ -13,8 +13,7 @@ public class SignUpOnFlyOutTests extends BaseUI {
         //Checkbox lates news and //Checkbox Terms and Conditions
         WebElement checkboxConfirmationLatestNews = driver.findElement(Locators.CHECKBOX_LATEST_NEWS);
         Assert.assertTrue(driver.findElement(Locators.CHECKBOX_LATEST_NEWS).isDisplayed());
-        checkboxConfirmationLatestNews.click();
-
+        mainPage.ajaxClick(checkboxConfirmationLatestNews);
         WebElement checkboxConfirmationOnSignupPage = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
         Assert.assertTrue(!driver.findElement(Locators.CHECKBOX_CONFIRMATION).isSelected());
         checkboxConfirmationOnSignupPage.click();

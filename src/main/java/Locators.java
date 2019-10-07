@@ -15,7 +15,7 @@ public class Locators {
     //Main page
     public static final By REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
     public static final By IFRAMELOCATOR = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
-    public static final By YOUTUBE_BUTTON = By.xpath("//button[@class='ytp-large-play-button ytp-button']");
+    public static final By YOUTUBE_BUTTON = By.xpath("//div[@data-layer='4']//button[@class='ytp-large-play-button ytp-button']");
     //Photos page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROPDOWN_SORT_BY_PHOTOS = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");

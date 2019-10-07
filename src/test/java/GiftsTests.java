@@ -8,13 +8,11 @@ public class GiftsTests extends BaseUI {
     public void testGiftsPage() {
         giftsPage.getToGiftsPage();
 
-    WebElement flowerBasketonGiftsPage = driver.findElement(Locators.FLOWER_BASKET);
-    if (flowerBasketonGiftsPage.getText().contains("Flower basket")){
-        flowerBasketonGiftsPage.click();
+        WebElement flowerBasketonGiftsPage = driver.findElement(Locators.FLOWER_BASKET);
+        if (flowerBasketonGiftsPage.getText().contains("Flower basket")) {
+            flowerBasketonGiftsPage.click();
+        } else {
+            Assert.fail("Flower Basket is not available");
+        }
     }
-    else{
-        Assert.fail("Flower Basket is not available");
-    }
-
-}
 }

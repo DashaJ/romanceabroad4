@@ -28,10 +28,12 @@ public class HowWeWorkTests extends BaseUI {
                     System.out.println("The bug is fixed");
                 }
             }
+
+            driver.findElements(Locators.LIST_OF_LINKS);
         }
-        driver.findElements(Locators.LIST_OF_LINKS);
     }
 }
+
 
 
 

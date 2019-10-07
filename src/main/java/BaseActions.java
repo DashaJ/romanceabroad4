@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,13 +32,17 @@ public class  BaseActions {
         select.selectByIndex(index);
     }
     public void ajaxClick(WebElement element) {
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
     public void ajaxClick(By by) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(by));
         wait.until(ExpectedConditions.elementToBeClickable(by));
         ajaxClick(driver.findElement(by));
+    }
+    public void performClick(By locator){
+        WebElement element= driver.findElement(locator);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.click().build().perform();
     }
 }

@@ -32,6 +32,5 @@ public void completeSecondRegistartionStep(){
     driver.findElement(Locators.CLICK_ON_YEAR_FIELD).click();
     driver.findElement(Locators.YEAR_DATE).click();
     driver.findElement(Locators.PHONE).sendKeys(Data.phone);
-
 }
 }

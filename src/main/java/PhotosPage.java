@@ -10,8 +10,11 @@ public class PhotosPage extends BaseActions {
     }
     public void getToPhotosPage(){
         driver.findElement(Locators.LINK_PHOTOS).click();
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.DROPDOWN_SORT_BY_PHOTOS)));
-        getDropDownByIndex(Locators.DROPDOWN_SORT_BY_PHOTOS, 1);
+
     }
+    public void clickOnDropdownViewsCount(){
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.DROPDOWN_SORT_BY_PHOTOS)));
+    getDropDownByIndex(Locators.DROPDOWN_SORT_BY_PHOTOS, 1);}
+
 }
 

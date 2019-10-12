@@ -9,12 +9,7 @@ public class BlogPage extends BaseActions {
 
     public void getToTheBlogPage (){
         driver.findElement(Locators.LINK_BLOG).click();
-        String currentBlogPageURL = driver.getCurrentUrl();
-        System.out.println(currentBlogPageURL);
-        //Verify that title of the Blog page is correct
-        Assert.assertEquals(currentBlogPageURL, Data.expectedblogpageURL);
     }
-
     public void clickOnOdessaDatingAgency(){
         driver.findElements(Locators.ODESSA_DATING_AGENCY_LINK).get(Data.indexodessadatingAgency);
     }

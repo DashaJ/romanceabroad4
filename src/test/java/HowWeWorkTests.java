@@ -17,7 +17,7 @@ public class HowWeWorkTests extends BaseUI {
 
             howWeWorkLinks.get(i).click();
             if (linksNames.contains(Data.expectedtitlehowweworkpage)) {
-                System.out.println("User was prompted to the correct page");
+                System.out.println("User prompted to the correct page");
                 String actualurl = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedurlhowweworkpage, actualurl);
 
@@ -25,11 +25,10 @@ public class HowWeWorkTests extends BaseUI {
                 if (actualurl.contains("#")) {
                     Assert.fail("Bad URL");
                 } else {
-                    System.out.println("The bug is fixed");
+                    System.out.println("The bug was fixed");
                 }
             }
-
-            driver.findElements(Locators.LIST_OF_LINKS);
+            howWeWorkLinks = driver.findElements(Locators.LIST_OF_LINKS);
         }
     }
 }

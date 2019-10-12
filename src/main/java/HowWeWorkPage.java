@@ -9,8 +9,5 @@ public class HowWeWorkPage extends BaseActions {
     public void getToHowWeWorkPage(){
         driver.findElement(Locators.LINK_HOW_WE_WORK).click();
     }
-    public void advertisingLink(){
-        driver.findElement(Locators.ADVERTISING_LINK).click();
-    }
 
 }

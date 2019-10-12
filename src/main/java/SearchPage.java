@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -6,14 +7,9 @@ public class SearchPage extends BaseActions {
     public SearchPage(WebDriver driver, WebDriverWait wait){
         super(driver, wait);
     }
+
     public void getToSearchPeoplePage(){
         driver.findElement(Locators.LINK_SERACH).click();
-        String currentURLsearch = driver.getCurrentUrl();
-        System.out.println(currentURLsearch);
-        Assert.assertEquals(currentURLsearch, Data.expectedurlsearch);
-    }
-    public void clickOnGallery() {
-        driver.findElement(Locators.GALLERY_VIEW).click();
     }
     public void fillMinMaxAge (){
         getDropDownByIndex(Locators.DROPDOWNLIST_AGE_MIN,0 );
@@ -27,5 +23,4 @@ public class SearchPage extends BaseActions {
         driver.findElement(Locators.FLYOUT_MENU).click();
         driver.findElement(Locators.NEWS_ON_THE_FLYOUT).click();
     }
-
 }

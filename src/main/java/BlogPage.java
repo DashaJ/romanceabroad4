@@ -7,9 +7,7 @@ public class BlogPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void getToTheBlogPage (){
-        driver.findElement(Locators.LINK_BLOG).click();
-    }
+
     public void clickOnOdessaDatingAgency(){
         driver.findElements(Locators.ODESSA_DATING_AGENCY_LINK).get(Data.indexodessadatingAgency);
     }

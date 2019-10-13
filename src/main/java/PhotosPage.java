@@ -8,10 +8,7 @@ public class PhotosPage extends BaseActions {
     public PhotosPage(WebDriver driver, WebDriverWait wait){
         super(driver, wait);
     }
-    public void getToPhotosPage(){
-        driver.findElement(Locators.LINK_PHOTOS).click();
 
-    }
     public void clickOnDropdownViewsCount(){
             wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.DROPDOWN_SORT_BY_PHOTOS)));
     getDropDownByIndex(Locators.DROPDOWN_SORT_BY_PHOTOS, 1);}

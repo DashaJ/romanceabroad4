@@ -77,6 +77,11 @@ public class BaseActions {
         actions.moveToElement(element).perform();
         actions.click().build().perform();
     }
+    public void performClick(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.click().build().perform();
+    }
 
     public void javaWaitSec(int sec) {
         try {

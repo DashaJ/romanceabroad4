@@ -6,8 +6,5 @@ public class HowWeWorkPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void getToHowWeWorkPage(){
-        driver.findElement(Locators.LINK_HOW_WE_WORK).click();
-    }
 
 }

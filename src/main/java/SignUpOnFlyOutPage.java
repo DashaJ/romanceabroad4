@@ -9,11 +9,7 @@ public class SignUpOnFlyOutPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void getTotheSignUp() {
-        driver.findElement(Locators.LINK_SERACH).click();
-        driver.findElement(Locators.FLYOUT_MENU).click();
-        driver.findElement(Locators.SIGN_UP_ON_THE_FLYOUT).click();
-    }
+
 
     public void fillRegistrationInfoFirstStep() {
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.EMAIL_FIELD)));

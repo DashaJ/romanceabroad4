@@ -5,14 +5,14 @@ public class SearchTests extends BaseUI {
 
     @Test
     public void testSearchPage() {
-        searchPage.getToSearchPeoplePage();
+        mainPage.getToSearchPeoplePage();
         String currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedurlsearch);
     }
     @Test
     public void testDefaultDropdown() {
-        searchPage.getToSearchPeoplePage();
+        mainPage.getToSearchPeoplePage();
 
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DEFAULT_DROPDOWN);
         System.out.println(sizeOfDropDownListSortBy);
@@ -24,7 +24,7 @@ public class SearchTests extends BaseUI {
     }
     @Test
     public void testAgeDropdowns() {
-        searchPage.getToSearchPeoplePage();
+        mainPage.getToSearchPeoplePage();
         searchPage.fillMinMaxAge();
         searchPage.sortSearchResultsByIndex();
         //Fly-out menu

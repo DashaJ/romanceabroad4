@@ -7,14 +7,8 @@ public class SignInPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void logInUsingFacebook() {
-        driver.findElement(Locators.LINK_SERACH).click();
-        driver.findElement(Locators.FLYOUT_MENU).click();
-        driver.findElement(Locators.LOGIN_ON_THE_FLYOUT).click();
-        driver.findElement(Locators.FACEBOOK_LINK).click();
-    }
-
     public String getFacebookLogo() {
+        driver.findElement(Locators.FACEBOOK_LINK).click();
         String text = driver.findElement(Locators.FACEBOOK_LOGO).getText();
         return text;
     }

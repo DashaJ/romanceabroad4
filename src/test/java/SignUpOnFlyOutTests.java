@@ -1,5 +1,4 @@
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,7 +6,7 @@ public class SignUpOnFlyOutTests extends BaseUI {
 
     @Test
     public void testSignUpOnFlyOut() {
-        signUpOnFlyOutPage.getTotheSignUp();
+        mainPage.getTotheSignUpOnFlyOut();
         signUpOnFlyOutPage.fillRegistrationInfoFirstStep();
         //Dropdowns
         signUpOnFlyOutPage.fillRegistartionInfoSecondStep();

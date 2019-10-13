@@ -5,7 +5,7 @@ public class TourToUkraineTests extends BaseUI {
 
     @Test
     public void testTourToUkrainePage() {
-        tourToUkrainePage.getToTourToUkraine();
+       mainPage.getToTourToUkraine();
         tourToUkrainePage.performSearchOnItemAndVerifyResult();
         mainPage.performClick(Locators.SEARCH_BUTTON_ON_TOURS_TO_UKRAINE_PAGE);
         String searchResult = tourToUkrainePage.getSearchResult();

@@ -11,9 +11,7 @@ public class RegistartionPage extends BaseActions {
         super(driver, wait);
     }
 
-public void clickjoinForFreeNow (){
-    driver.findElement(Locators.REGISTRATION_BUTTON).click();
-}
+
 public void registrationFirstStep(){
     driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.registration_email);
     driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registration_password);

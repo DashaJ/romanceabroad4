@@ -4,7 +4,7 @@ public class PhotosTests extends BaseUI {
 
     @Test
     public void testPhotosPage() {
-       photosPage.getToPhotosPage();
+       mainPage.getToPhotosPage();
         photosPage.clickOnDropdownViewsCount();
     }
     @Test

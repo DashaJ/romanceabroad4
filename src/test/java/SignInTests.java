@@ -7,7 +7,7 @@ public class SignInTests extends BaseUI {
 
     @Test
     public void testSignInPage() {
-        signInPage.logInUsingFacebook();
+        mainPage.logInUsingFacebook();
 
         WebElement facebookLogo = driver.findElement(Locators.FACEBOOK_LOGO);
         if (facebookLogo.getText().contains("Facebook")) {

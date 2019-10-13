@@ -17,12 +17,12 @@ public class Locators {
     public static final By IFRAMELOCATOR = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By YOUTUBE_BUTTON = By.xpath("//div[@data-layer='4']//button[@class='ytp-large-play-button ytp-button']");
     public static final By JOIN_TODAY = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
+    public static final By LINK_SERACH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     //Photos page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROPDOWN_SORT_BY_PHOTOS = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");
     //Search page
-    public static final By SEARCH_BUTTON_OnTheSearchWidget = By.cssSelector("#main_search_button_user_advanced");
-    public static final By LINK_SERACH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
+    public static final By SEARCH_BUTTON_ONSEARCHWIDGET = By.cssSelector("#main_search_button_user_advanced");
     public static final By DEFAULT_DROPDOWN = By.xpath("//div[@class='form-inline']//select");
     public static final By NEWS_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-news-item']");
     public static final By FLYOUT_MENU = By.xpath("//i[@class='fa fa-bars fa-lg item']");
@@ -55,12 +55,37 @@ public class Locators {
     public static final By RESULT_OF_THE_SEARCH = By.xpath("//div[@class='store-main-block']//h2");
     //SIGN UP ON THE FLY OUT
     public static final By SIGN_UP_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-registration-item']");
-    public static final By EMAIL_FIELD= By.xpath("//input[@name='email']");
-    public static final By USERNAME_FIELD1= By.xpath("//input[@name='nickname']");
-    public static final By PASSWORD_FIELD1= By.xpath("//input[@name='password']");
+    public static final By EMAIL_FIELD = By.xpath("//input[@name='email']");
+    public static final By USERNAME_FIELD1 = By.xpath("//input[@name='nickname']");
+    public static final By PASSWORD_FIELD1 = By.xpath("//input[@name='password']");
     public static final By DROPDOWNLIST_BIRTH_DATE = By.xpath("//div[@id='daySelect']//select");
     public static final By DROPDOWNLIST_BIRTH_MONTH = By.xpath("//div[@id='monthSelect']//select");
     public static final By DROPDOWNLIST_BIRTH_YEAR = By.xpath("//div[@id='yearSelect']//select");
     public static final By PHONE_FIELD = By.xpath("//div[@class='form-group']//input[@name='phone']");
-    public static final By CHECKBOX_LATEST_NEWS = By.cssSelector("input#sub1");
+    public static final By CHECKBOX_LATEST_NEWS = By.xpath("//div[@class='col-sm-6']//input[@id='sub1']");
+
+    //Xpath Locators with 2 attributes
+    //Search Page
+    public static final By GALLERY_VIEW = By.xpath("//a[@title='Gallery view'][contains(text(),'Gallery view')]");
+    //Gifts Page
+    public static final By SPA = By.xpath("//div[@class='text-overflow'][contains(text(),'Spa')]");
+    public static final By TEDDYBEAR_QUICK_VIEW = By.xpath("//div[@id='product_quick_view_2']//input[@class='btn btn-primary']");
+    //Footer
+    public static final By SITEMAP = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-map-item']//div[@class='footer-menu-list-group-item-text']");
+    //Gifts Page
+    public static final By LANGUAGE_RUSSIAN = By.xpath("//li[@class='last']//a[contains(text(),'Русский')]");
+    //Tour to Ukraine Page
+    public static final By PAYPAL_BUTTON = By.xpath("//div[@class='mt20']//a[@class='btn btn-primary btn-block']");
+    //News Page
+    public static final By RSS_FEED = By.xpath("//div[@class='search-header']//a[@href='https://romanceabroad.com/news/rss']");
+
+
+    // Xpath Locators with 2 parents
+    public static final By ADD_PHOTO_ALBUMSPAGE = By.xpath("//div[@class='col-sm-6 col-md-3 b-album-filters__addfile']//div[@class='btn-group']//button[@type='button']");
+    //Photos Page
+    public static final By ALBUMS = By.xpath("//ul//li//a[@href='https://romanceabroad.com/media/albums']");
+    //News Page
+    public static final By MARRY_UKRANIAN_LADY = By.xpath("//div[@class='col-xs-12']//div[@class='breadcrumbs']//span[@itemprop='title']");
+
+
 }

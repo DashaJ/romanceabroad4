@@ -6,7 +6,11 @@ public class GiftsTests extends BaseUI {
 
     @Test
     public void testGiftsPage() {
-        giftsPage.getToGiftsPage();
+        mainPage.getToGiftsPage();
+        String currentgiftsPage = driver.getCurrentUrl();
+        System.out.println(currentgiftsPage);
+        //Verify that User prompted to correct Gifts page
+        Assert.assertEquals(currentgiftsPage, Data.expectedgiftsPage);
 
         WebElement flowerBasketonGiftsPage = driver.findElement(Locators.FLOWER_BASKET);
         if (flowerBasketonGiftsPage.getText().contains("Flower basket")) {

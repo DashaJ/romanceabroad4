@@ -7,10 +7,6 @@ public class TourToUkrainePage extends BaseActions {
     public TourToUkrainePage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
-
-    public void getToTourToUkraine() {
-        driver.findElement(Locators.TOUR_TO_UKRAINE).click();
-    }
     public void performSearchOnItemAndVerifyResult() {
         driver.findElement(Locators.SEARCH_FIELD_ON_TOURS_TO_UKRAINE_PAGE).sendKeys("#");
     }

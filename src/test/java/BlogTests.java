@@ -8,7 +8,7 @@ public class BlogTests extends BaseUI {
 
     @Test
     public void testBlogPage() {
-        blogPage.getToTheBlogPage();
+        mainPage.getToTheBlogPage();
         String currentBlogPageURL = driver.getCurrentUrl();
         System.out.println(currentBlogPageURL);
         //Verify that title of the Blog page is correct

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class RegistrationTests extends BaseUI {
     @Test
     public void registrationTest() {
-        registrationPage.clickjoinForFreeNow();
+        mainPage.clickjoinForFreeNow();
         registrationPage.registrationFirstStep();
         registrationPage.completeFirstRegistartionStep();
         registrationPage.completeSecondRegistartionStep();

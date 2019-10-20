@@ -2,8 +2,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TourToUkraineTests extends BaseUI {
+    public static final boolean testCase14 = true;
 
-    @Test
+    @Test(priority= 3, enabled = testCase14, groups ={"regression"})
     public void testTourToUkrainePage() {
        mainPage.getToTourToUkraine();
         tourToUkrainePage.performSearchOnItemAndVerifyResult();

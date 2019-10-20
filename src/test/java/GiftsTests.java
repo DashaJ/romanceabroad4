@@ -3,9 +3,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GiftsTests extends BaseUI {
+    public static final boolean testCase12 = true;
 
-    @Test
-    public void testGiftsPage() {
+    @Test(priority= 1, enabled = testCase12, groups ={"regression"})
+    public void testGiftsPageTestCase12() {
         mainPage.getToGiftsPage();
         String currentgiftsPage = driver.getCurrentUrl();
         System.out.println(currentgiftsPage);

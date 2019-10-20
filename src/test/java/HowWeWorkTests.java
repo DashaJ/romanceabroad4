@@ -4,9 +4,10 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class HowWeWorkTests extends BaseUI {
-    @Test
-    public void testHowWeWorkPage() {
+    public static final boolean testCase9 = true;
 
+    @Test(priority= 1, enabled = testCase9, groups ={"regression"})
+    public void testHowWeWorkPageTestCase9() {
         mainPage.getToHowWeWorkPage();
         List<WebElement> howWeWorkLinks = driver.findElements(Locators.LIST_OF_LINKS);
         System.out.println(howWeWorkLinks.size());
@@ -21,7 +22,7 @@ public class HowWeWorkTests extends BaseUI {
                 String actualurl = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedurlhowweworkpage, actualurl);
 
-                driver.findElement(Locators.CAROUSEL_IMAGES).isDisplayed();
+                howWeWorkPage.findCarouselImages();
                 if (actualurl.contains("#")) {
                     Assert.fail("Bad URL");
                 } else {

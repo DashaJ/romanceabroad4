@@ -24,11 +24,12 @@ public class BaseUI {
     RegistartionPage registrationPage;
     SignInPage signInPage;
     SignUpOnFlyOutPage signUpOnFlyOutPage;
+    ContactUsPage contactUsPage;
     TourToUkrainePage tourToUkrainePage;
     SoftAssert softAssert = new SoftAssert();
 
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"search","admin", "user"}, alwaysRun = true)
 
     @Parameters("browser")
     public void setup(@Optional("chrome") String browser, Method method){
@@ -67,14 +68,15 @@ public class BaseUI {
         signInPage = new SignInPage(driver, wait);
         signUpOnFlyOutPage = new SignUpOnFlyOutPage(driver, wait);
         tourToUkrainePage = new TourToUkrainePage(driver, wait);
+        contactUsPage = new ContactUsPage(driver, wait);
 
         driver.manage().window().maximize();
         driver.get(mainUrl);
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
+    //@AfterMethod
+    //public void tearDown() {
+       // driver.quit();
     }
 
-}
+//}

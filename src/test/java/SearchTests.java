@@ -2,16 +2,19 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SearchTests extends BaseUI {
+    public static final boolean testCase4 = true;
+    public static final boolean testCase5 = false;
+    public static final boolean testCase6 = true;
 
-    @Test
-    public void testSearchPage() {
+    @Test(priority= 1, enabled = testCase4, groups ={"smoke"})
+    public void testSearchPageTestCase1() {
         mainPage.getToSearchPeoplePage();
         String currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedurlsearch);
     }
-    @Test
-    public void testDefaultDropdown() {
+    @Test(priority= 2, enabled = testCase5, groups ={"regression"})
+    public void testDefaultDropdownTestCase2() {
         mainPage.getToSearchPeoplePage();
 
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DEFAULT_DROPDOWN);
@@ -22,8 +25,8 @@ public class SearchTests extends BaseUI {
             mainPage.javaWaitSec(3);
         }
     }
-    @Test
-    public void testAgeDropdowns() {
+    @Test(priority= 3, enabled = testCase6, groups ={"regression"})
+    public void testAgeDropdownsTestCase3() {
         mainPage.getToSearchPeoplePage();
         searchPage.fillMinMaxAge();
         searchPage.sortSearchResultsByIndex();

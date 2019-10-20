@@ -1,34 +1,61 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class RegistartionPage extends BaseActions {
-    public RegistartionPage(WebDriver driver, WebDriverWait wait){
+    public RegistartionPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
 
-public void registrationFirstStep(){
-    driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.registration_email);
-    driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.registration_password);
-    wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.NEXT_BUTTON)));
-    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    public void registrationFirstStep(String registrationemail, String registrationpassword) {
+        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(registrationemail);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(registrationpassword);
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.NEXT_BUTTON)));
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(Locators.NEXT_BUTTON).click();
+    }
+    public void completeSecondRegistartionStep(String username, String days, String month, String year, String phone,
+                                               String location, String city) {
+        driver.findElement(Locators.USERNAME_FIELD).sendKeys(username);
+
+        driver.findElement(Locators.LIST_DAYS).click();
+        checkValueOfLists(Locators.LIST_VALUE_DAYS, days);
+
+        driver.findElement(Locators.LIST_MONTH).click();
+        checkValueOfLists(Locators.LIST_VALUE_MONTH, month);
+
+        driver.findElement(Locators.LIST_YEAR).click();
+        checkValueOfLists(Locators.LIST_VALUE_YEAR, year);
+
+        driver.findElement(Locators.PHONE).sendKeys(phone);
+        driver.findElement(Locators.AUTO_FILLING_LOCATION).clear();
+        driver.findElement(Locators.AUTO_FILLING_LOCATION).sendKeys(city);
+        checkValueOfLists(Locators.LIST_VALUE_LOCATION, location);
+    }
+    public void checkValueOfLists(By locator, String text) {
+        List<WebElement> elements = driver.findElements(locator);
+        for (int i = 0; i < elements.size(); i++) {
+            WebElement elementOfList = elements.get(i);
+            String value = elementOfList.getText();
+            if (value.contains(text)) {
+                elementOfList.click();
+            }
+
+
+        }
+
+    }
 }
-public void completeFirstRegistartionStep(){
-    driver.findElement(Locators.NEXT_BUTTON).click();
-}
-public void completeSecondRegistartionStep(){
-    driver.findElement(Locators.USERNAME_FIELD).sendKeys(generateNewNumber(Data.username, 10));
-    driver.findElement(Locators.CLICK_ON_DATE_FIELD).click();
-    driver.findElement(Locators.BIRTH_DATE).click();
-    driver.findElement(Locators.CLICK_ON_MONTH_FIELD).click();
-    driver.findElement(Locators.MONTH_DATE).click();
-    driver.findElement(Locators.CLICK_ON_YEAR_FIELD).click();
-    driver.findElement(Locators.YEAR_DATE).click();
-    driver.findElement(Locators.PHONE).sendKeys(Data.phone);
-}
-}
+/*public void clickSpecificLocation(String location){
+        List<WebElement>locations =driver.findElements(By.xpath("//div[@class='dropdown dropdown_location']//ul//li"));
+    for (int i = 0; i <locations.size(); i++) {
+        if (locations.get(i).getText().contains(location));
+        locations.get(i).click();
+    }*/

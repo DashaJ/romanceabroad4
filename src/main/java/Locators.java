@@ -18,6 +18,7 @@ public class Locators {
     public static final By YOUTUBE_BUTTON = By.xpath("//div[@data-layer='4']//button[@class='ytp-large-play-button ytp-button']");
     public static final By JOIN_TODAY = By.xpath("//div[@class='col-lg-12 text-center']//a[@href='#']");
     public static final By LINK_SERACH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
+    public static final By TABS_MAINPAGE = By.xpath("//ul[@clas='navbar_nav']//li/a");
     //Photos page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROPDOWN_SORT_BY_PHOTOS = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");
@@ -29,10 +30,11 @@ public class Locators {
     public static final By DROPDOWNLIST_SORT_BY = By.xpath("//div[@class='pull-left pl15']//select");
     public static final By DROPDOWNLIST_AGE_MIN = By.xpath("//div[@class='col-xs-5 no-padding-left']//select[@id='age_min']");
     public static final By DROPDOWNLIST_AGE_MAX = By.xpath("//div[@class='col-xs-5 no-padding-right']//select[@name='age_max']");
+    public static final By CONTACT_US = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-tickets-item']//div[1]");
     //Sign in Page
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
-    public static final By FACEBOOK_LINK = By.xpath("//i[@class='fa fa-facebook-official']");
-    public static final By FACEBOOK_LOGO = By.xpath("//i[@class='fb_logo img sp_lFwffOkkE26 sx_46e267']//u");
+    public static final By FACEBOOK_LINK = By.xpath("//a[@href='https://romanceabroad.com/users_connections/oauth_login/1']");
+    public static final By FACEBOOK_LOGO = By.xpath("//i[@class='fb_logo img sp_lFwffOkkE26 sx_46e267']");
     //Registration page
     public static final By PAYPAL_LINK = By.xpath("//a[@class='btn btn-primary btn-block']");
     public static final By REGISTRATION_BUTTON = By.xpath("//button[@id='show-registration-block']");
@@ -40,14 +42,26 @@ public class Locators {
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
     public static final By NEXT_BUTTON = By.xpath("//div[@class='col-xs-12']//button[@class='btn btn-primary btn-block btn-lg'][contains(text(),'Next')] ");
     public static final By USERNAME_FIELD = By.cssSelector("input#nickname");
-    public static final By CLICK_ON_DATE_FIELD = By.cssSelector("#daySelect");
-    public static final By BIRTH_DATE = By.xpath("//li[@data-handler='selectDay']//a[text()='2']");
-    public static final By CLICK_ON_MONTH_FIELD = By.cssSelector("#monthSelect");
-    public static final By MONTH_DATE = By.xpath("//li[@data-handler='selectMonth']//a[text()='Feb']");
-    public static final By CLICK_ON_YEAR_FIELD = By.cssSelector("#yearSelect");
-    public static final By YEAR_DATE = By.xpath("//li[@data-handler='selectYear']//a[text()='1990']");
+
+    public static final By LIST_DAYS = By.cssSelector("#daySelect");
+    public static final By LIST_VALUE_DAYS = By.xpath("//li[@data-handler='selectDay']");
+    public static final By LIST_MONTH = By.cssSelector("#monthSelect");
+    public static final By LIST_VALUE_MONTH = By.xpath("//li[@data-handler='selectMonth']");
+    public static final By LIST_YEAR = By.cssSelector("#yearSelect");
+    public static final By LIST_VALUE_YEAR = By.xpath("//li[@data-handler='selectYear']");
     public static final By PHONE = By.xpath("//input[@name='data[phone]']");
+    public static final By AUTO_FILLING_LOCATION = By.cssSelector("input#country_text_619428");
+    public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("input#confirmation");
+    //Contact Us Page
+    public static final By LIST_REASON_VALUE = By.xpath("//select[@name='id_reason']//option");
+    public static final By LIST_REASON = By.xpath("//select[@name='id_reason']");
+    public static final By YOUR_NAME = By.xpath("//input[@name='user_name']");
+    public static final By YOUR_EMAIL = By.xpath("//input[@name='user_email']");
+    public static final By SUBJECT = By.xpath("//input[@name='subject']");
+    public static final By MESSAGE = By.xpath("//div//div//textarea[@name='message']");
+    public static final By SEND_BUTTON = By.xpath("//input[@value='Send']");
+    public static final By ERROR_ALERT = By.xpath("//div[@class='error alert-danger alert-warning_pop_']")
     //Tours To Ukraine Page
     public static final By TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
     public static final By SEARCH_BUTTON_ON_TOURS_TO_UKRAINE_PAGE = By.cssSelector("button#search_friend");
@@ -62,7 +76,7 @@ public class Locators {
     public static final By DROPDOWNLIST_BIRTH_MONTH = By.xpath("//div[@id='monthSelect']//select");
     public static final By DROPDOWNLIST_BIRTH_YEAR = By.xpath("//div[@id='yearSelect']//select");
     public static final By PHONE_FIELD = By.xpath("//div[@class='form-group']//input[@name='phone']");
-    public static final By CHECKBOX_LATEST_NEWS = By.xpath("//div[@class='col-sm-6']//input[@id='sub1']");
+    public static final By CHECKBOX_LATEST_NEWS = By.xpath("//div[@class='col-sm-6']//input");
 
     //Xpath Locators with 2 attributes
     //Search Page

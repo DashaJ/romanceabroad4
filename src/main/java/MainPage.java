@@ -6,6 +6,9 @@ public class MainPage extends BaseActions {
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
+    public void youtubeButton(){
+        driver.findElement(Locators.YOUTUBE_BUTTON).click();
+    }
 
     public void requestTourInfo() {
         driver.findElement(Locators.REQUEST_TOUR_INFO).click();

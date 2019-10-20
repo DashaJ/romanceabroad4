@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 
 public class Locators {
     //Blog page
-    public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
+    public static final By LINK_BLOG = By.cssSelector("a[@href='https://romanceabroad.com/content/view/blog']");
     public static final By ODESSA_DATING_AGENCY_LINK = By.xpath("//div[@class='info-menu-inner']");
     public static final By BLOG_CATEGORIES = By.xpath("//div[@class='info-content-block wysiwyg']//ul//li");
     //Gifts page

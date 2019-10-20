@@ -5,21 +5,23 @@ import java.util.List;
 
 public class HowWeWorkTests extends BaseUI {
     public static final boolean testCase9 = true;
+    String linksNames;
+    String actualurl;
 
     @Test(priority= 1, enabled = testCase9, groups ={"regression"})
     public void testHowWeWorkPageTestCase9() {
         mainPage.getToHowWeWorkPage();
-        List<WebElement> howWeWorkLinks = driver.findElements(Locators.LIST_OF_LINKS);
+        List<WebElement> howWeWorkLinks = howWeWorkPage.collectLinks();
         System.out.println(howWeWorkLinks.size());
 
         for (int i = 0; i < howWeWorkLinks.size(); i++) {
-            String linksNames = howWeWorkLinks.get(i).getText();
+            linksNames = howWeWorkLinks.get(i).getText();
             System.out.println(linksNames);
 
             mainPage.performClick(howWeWorkLinks.get(i));
             if (linksNames.contains(Data.expectedtitlehowweworkpage)) {
                 System.out.println("User prompted to the correct page");
-                String actualurl = driver.getCurrentUrl();
+                actualurl = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedurlhowweworkpage, actualurl);
 
                 howWeWorkPage.findCarouselImages();

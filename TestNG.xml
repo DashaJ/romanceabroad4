@@ -2,7 +2,7 @@
 
 <suite name="TestSuite" parallel="none">
 
-    <test name="IETestCases">
+   <test name="IETestCases">
         <parameter name="browser" value= "ie"/>
 
         <classes>

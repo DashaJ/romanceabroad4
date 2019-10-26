@@ -21,8 +21,8 @@ public class RegistartionPage extends BaseActions {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(Locators.NEXT_BUTTON).click();
     }
-    public void completeSecondRegistartionStep(String username, String days, String month, String year, String phone,
-                                               String location, String city) {
+    public void completeSecondRegistartionStep(String username, String days, String month, String year, String phone
+                                               ) {
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(username);
 
         driver.findElement(Locators.LIST_DAYS).click();
@@ -35,10 +35,11 @@ public class RegistartionPage extends BaseActions {
         checkValueOfLists(Locators.LIST_VALUE_YEAR, year);
 
         driver.findElement(Locators.PHONE).sendKeys(phone);
-        driver.findElement(Locators.AUTO_FILLING_LOCATION).clear();
-        driver.findElement(Locators.AUTO_FILLING_LOCATION).sendKeys(city);
-        checkValueOfLists(Locators.LIST_VALUE_LOCATION, location);
-    }
+        //wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.AUTO_FILLING_LOCATION)));
+        //driver.findElement(Locators.AUTO_FILLING_LOCATION).clear();
+        //driver.findElement(Locators.AUTO_FILLING_LOCATION).sendKeys(city);
+        //checkValueOfLists(Locators.LIST_VALUE_LOCATION, location);
+}
     public void checkValueOfLists(By locator, String text) {
         List<WebElement> elements = driver.findElements(locator);
         for (int i = 0; i < elements.size(); i++) {

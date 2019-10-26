@@ -7,7 +7,7 @@ public class MainPage extends BaseActions {
         super(driver, wait);
     }
     public void youtubeButton(){
-        driver.findElement(Locators.YOUTUBE_BUTTON).click();
+        ajaxClick(driver.findElement(Locators.YOUTUBE_BUTTON));
     }
 
     public void requestTourInfo() {

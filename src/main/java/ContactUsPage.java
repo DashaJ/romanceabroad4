@@ -12,14 +12,13 @@ public class ContactUsPage extends BaseActions {
         scrollToBottomOfPage();
         ajaxClick(Locators.CONTACT_US);
     }
-
-    public void fillTextFields() {
+    public void fillTextFields(String reasontext ,String yourname,String registration_email,String subject,String messagetext) {
         driver.findElement(Locators.LIST_REASON).click();
-        checkValueOfLists(Locators.LIST_REASON_VALUE, Data.reasontext);
-        driver.findElement(Locators.YOUR_NAME).sendKeys(Data.yourname);
-        driver.findElement(Locators.YOUR_EMAIL).sendKeys(Data.registration_email);
-        driver.findElement(Locators.SUBJECT).sendKeys(Data.subject);
-        driver.findElement(Locators.MESSAGE).sendKeys(Data.messagetext);
+        checkValueOfLists(Locators.LIST_REASON_VALUE, reasontext);
+        driver.findElement(Locators.YOUR_NAME).sendKeys(yourname);
+        driver.findElement(Locators.YOUR_EMAIL).sendKeys(registration_email);
+        driver.findElement(Locators.SUBJECT).sendKeys(subject);
+        driver.findElement(Locators.MESSAGE).sendKeys(messagetext);
         driver.findElement(Locators.SEND_BUTTON).click();
     }
 }

@@ -17,7 +17,7 @@ public class Data {
     public static final String day ="25";
     public static final String month ="February";
     public static final String year ="1988";
-    public static final String city ="Palm Harbor";
+    public static final String city ="East Lake, Florida, United States";
     public static final String location ="Palm Harbor, United States";
 
     //ContactUs Page

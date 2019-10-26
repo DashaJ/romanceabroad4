@@ -50,7 +50,7 @@ public class Locators {
     public static final By LIST_YEAR = By.cssSelector("#yearSelect");
     public static final By LIST_VALUE_YEAR = By.xpath("//li[@data-handler='selectYear']");
     public static final By PHONE = By.xpath("//input[@name='data[phone]']");
-    public static final By AUTO_FILLING_LOCATION = By.cssSelector("input#country_text_619428");
+    public static final By AUTO_FILLING_LOCATION = By.xpath("//input[@name='region_name']");
     public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("input#confirmation");
     //Contact Us Page
@@ -61,7 +61,7 @@ public class Locators {
     public static final By SUBJECT = By.xpath("//input[@name='subject']");
     public static final By MESSAGE = By.xpath("//div//div//textarea[@name='message']");
     public static final By SEND_BUTTON = By.xpath("//input[@value='Send']");
-    public static final By ERROR_ALERT = By.xpath("//div[@class='error alert-danger alert-warning_pop_']")
+    public static final By ERROR_ALERT = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
     //Tours To Ukraine Page
     public static final By TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
     public static final By SEARCH_BUTTON_ON_TOURS_TO_UKRAINE_PAGE = By.cssSelector("button#search_friend");

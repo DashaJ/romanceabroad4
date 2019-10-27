@@ -52,7 +52,7 @@ public class Locators {
     public static final By PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By AUTO_FILLING_LOCATION = By.xpath("//input[@name='region_name']");
     public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
-    public static final By CHECKBOX_CONFIRMATION = By.cssSelector("input#confirmation");
+    public static final By CHECKBOX_CONFIRMATION = By.xpath("//input[@type='checkbox']");
     //Contact Us Page
     public static final By LIST_REASON_VALUE = By.xpath("//select[@name='id_reason']//option");
     public static final By LIST_REASON = By.xpath("//select[@name='id_reason']");

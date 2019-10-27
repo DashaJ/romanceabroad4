@@ -73,10 +73,8 @@ public class BaseUI {
         driver.manage().window().maximize();
         driver.get(mainUrl);
     }
-
-    //@AfterMethod
-    //public void tearDown() {
-       // driver.quit();
+    @AfterMethod
+    public void tearDown() {
+       driver.quit();
     }
-
-//}
+}

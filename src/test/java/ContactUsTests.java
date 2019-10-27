@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ContactUsTests extends BaseUI {
     @DataProvider(name = "ContactUs")
-    public static Object[][] testRegistration() throws Exception{
+    public static Object[][] testContactUs() throws Exception{
         ArrayList<Object[]> out = new ArrayList<>();
         Files.readAllLines(Paths.get("ContactUs.csv")).stream().forEach(s->{
             String[] data = s.split(",");

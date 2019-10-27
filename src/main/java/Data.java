@@ -17,7 +17,7 @@ public class Data {
     public static final String day ="25";
     public static final String month ="February";
     public static final String year ="1988";
-    public static final String city ="East Lake, Florida, United States";
+    public static final String city ="East Lake";
     public static final String location ="Palm Harbor, United States";
 
     //ContactUs Page
@@ -35,6 +35,12 @@ public class Data {
     //How We Work Page
     public static final String expectedtitlehowweworkpage ="Advertising";
     public static final String expectedurlhowweworkpage ="https://romanceabroad.com/content/view/advertising";
+ public static final String email1= "fake@gmail.com";
+   public static final String email2 = "gfsj@gmail.com";
+     public static final String email3="emai3@gmail.com" ;
+    public static final String registration_password1 = "251988D";
+    public static final String registration_password2 = "25021988";
+    public static final String registration_password3 = "2502198";
 
 
 }

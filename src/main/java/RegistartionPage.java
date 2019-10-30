@@ -17,10 +17,13 @@ public class RegistartionPage extends BaseActions {
     public void registrationFirstStep(String registrationemail, String registrationpassword) {
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(registrationemail);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(registrationpassword);
-        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.NEXT_BUTTON)));
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        driver.findElement(Locators.NEXT_BUTTON).click();
     }
+   public void clickNextButton(){
+       wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.NEXT_BUTTON)));
+       driver.findElement(Locators.NEXT_BUTTON).click();
+
+   }
+
     public void completeSecondRegistartionStep(String username, String days, String month, String year, String phone, String city
                                                ) {
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(username);

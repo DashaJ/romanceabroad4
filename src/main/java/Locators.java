@@ -53,6 +53,8 @@ public class Locators {
     public static final By AUTO_FILLING_LOCATION = By.xpath("//input[@name='region_name']");
     public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
     public static final By CHECKBOX_CONFIRMATION = By.xpath("//input[@type='checkbox']");
+    public static final By TOOLTIP_ERROR = By.xpath("//div[@class='tooltip']");
+
     //Contact Us Page
     public static final By LIST_REASON_VALUE = By.xpath("//select[@name='id_reason']//option");
     public static final By LIST_REASON = By.xpath("//select[@name='id_reason']");

@@ -19,28 +19,25 @@ public class Data {
     public static final String year ="1988";
     public static final String city ="East Lake";
     public static final String location ="Palm Harbor, United States";
+    public static final int lenghtsecondpartofnickname = 5;
 
+    public static final String email1 = "fake@gmail.com";
+    public static final String email2= "fa456ke@mail.ru";
+    public static final String email3 ="fake6878@inbox.com";
+    public static final String nickname1part="Nick";
+    public static final String nickname= MainPage.generateNewNumber(nickname1part, Data.lenghtsecondpartofnickname);
     //ContactUs Page
     public static final String reasontext ="Other";
     public static final String subject ="Booking";
     public static final String messagetext ="Question about booking";
     public static final String yourname = "John";
 
-
-
-
-
     //Main Page
     public static final String expectedtitlemainpage = "The Best Free Ukrainian Dating Site| Romanceabroad.Com";
     //How We Work Page
     public static final String expectedtitlehowweworkpage ="Advertising";
     public static final String expectedurlhowweworkpage ="https://romanceabroad.com/content/view/advertising";
- public static final String email1= "fake@gmail.com";
-   public static final String email2 = "gfsj@gmail.com";
-     public static final String email3="emai3@gmail.com" ;
-    public static final String registration_password1 = "251988D";
-    public static final String registration_password2 = "25021988";
-    public static final String registration_password3 = "2502198";
+
 
 
 }

@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.testng.annotations.Test;
 
 public class PhotosTests extends BaseUI {

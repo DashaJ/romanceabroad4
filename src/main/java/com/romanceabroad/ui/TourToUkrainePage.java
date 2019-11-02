@@ -1,7 +1,7 @@
-import org.openqa.selenium.By;
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class TourToUkrainePage extends BaseActions {
     public TourToUkrainePage(WebDriver driver, WebDriverWait wait) {

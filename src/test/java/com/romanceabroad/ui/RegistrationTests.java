@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,7 +10,7 @@ import org.testng.annotations.Test;
 public class RegistrationTests extends BaseUI {
 
 
-    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders)
+    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     //(priority= 1, enabled = testCase9, groups ={"smoke"})
     public void registrationTestCase2(String registration_email, String nickname, boolean requirment) {
 

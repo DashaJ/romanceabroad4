@@ -6,14 +6,14 @@
         <parameter name="browser" value= "ie"/>
 
         <classes>
-        <class name ="RegistrationTests"/>
+        <class name ="com.romanceabroad.ui.RegistrationTests"/>
         </classes>
         </test>
 
     <test name="FirefoxTestCases">
         <parameter name="browser" value="firefox"/>
         <classes>
-        <class name ="RegistrationTests"/>
+        <class name ="com.romanceabroad.ui.RegistrationTests"/>
         </classes>
         </test>
 
@@ -26,7 +26,7 @@
                 </run>
             </groups>
         <classes>
-        <class name ="SearchTests">
+        <class name ="com.romanceabroad.ui.SearchTests">
             <methods>
             <include name=".*howWe. *"/>
             </methods>

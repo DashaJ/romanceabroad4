@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 
 public class Locators {
@@ -80,7 +82,7 @@ public class Locators {
     public static final By PHONE_FIELD = By.xpath("//div[@class='form-group']//input[@name='phone']");
     public static final By CHECKBOX_LATEST_NEWS = By.xpath("//div[@class='col-sm-6']//input");
 
-    //Xpath Locators with 2 attributes
+    //Xpath com.romanceabroad.ui.Locators with 2 attributes
     //Search Page
     public static final By GALLERY_VIEW = By.xpath("//a[@title='Gallery view'][contains(text(),'Gallery view')]");
     //Gifts Page
@@ -96,7 +98,7 @@ public class Locators {
     public static final By RSS_FEED = By.xpath("//div[@class='search-header']//a[@href='https://romanceabroad.com/news/rss']");
 
 
-    // Xpath Locators with 2 parents
+    // Xpath com.romanceabroad.ui.Locators with 2 parents
     public static final By ADD_PHOTO_ALBUMSPAGE = By.xpath("//div[@class='col-sm-6 col-md-3 b-album-filters__addfile']//div[@class='btn-group']//button[@type='button']");
     //Photos Page
     public static final By ALBUMS = By.xpath("//ul//li//a[@href='https://romanceabroad.com/media/albums']");

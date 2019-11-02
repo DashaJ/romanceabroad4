@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -23,7 +25,7 @@ public class MainTests extends BaseUI {
         String actualtitlemainpage = driver.getTitle();
         System.out.println(actualtitlemainpage);
         String expectedtitlemainpage = Data.expectedtitlemainpage;
-        //Verify that MainPage has correct title
+        //Verify that com.romanceabroad.ui.MainPage has correct title
         softAssert.assertEquals(actualtitlemainpage, expectedtitlemainpage);
     }
     @Test(priority= 1, enabled = testCase3, groups ={"regression"})

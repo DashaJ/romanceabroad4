@@ -1,14 +1,26 @@
+package com.romanceabroad.ui;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class DataProvider {
+public class DataProviders {
     @org.testng.annotations.DataProvider(name = "Registration2")
     public static Object[][] testRegistration2() {
         return new Object[][]{
                 {Data.email1,Data.nickname,true},
                 {Data.email2,Data.nickname, false},
                 {Data.email3,Data.nickname, true},
+
+        };
+    }
+    @org.testng.annotations.DataProvider(name = "Search")
+    public static Object[][] testSearch() {
+        return new Object[][]{
+                {"18","80","Default"},
+                {"25","50","Name"},
+                {"40","60","Views"},
+                {"60","80", "Registration date"},
 
         };
     }

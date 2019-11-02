@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 public class Data {
     //Main Page
     public static final String mainUrl = "https://romanceabroad.com/";

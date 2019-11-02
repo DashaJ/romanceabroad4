@@ -1,3 +1,4 @@
+package com.romanceabroad.ui;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -45,10 +46,24 @@ public class BaseActions {
         }
         return 0;
     }
+    public void getDropDownListByIndex1(WebElement element, int index){
+        Select select = new Select(element);
+        select.selectByIndex(index);
+    }
+
+    public void getDropDownListByValue1(WebElement element, String value){
+        Select select = new Select(element);
+        select.selectByValue(value);
+    }
 
     public void getDropDownByValue(By locator, String value) {
         Select select = new Select(driver.findElement(locator));
         select.selectByValue(value);
+    }
+
+    public void getDropDownListByText1(WebElement element, String text){
+        Select select = new Select(element);
+        select.selectByVisibleText(text);
     }
 
     public void getDropDownByText(By locator, String text) {
@@ -74,6 +89,9 @@ public class BaseActions {
     }
     public void scrollToBottomOfPage(){
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+    public void ajaxScroll(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     public void checkValueOfLists(By locator, String text) {

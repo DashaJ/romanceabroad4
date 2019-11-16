@@ -9,8 +9,8 @@ public class DataProviders {
     public static Object[][] testRegistration2() {
         return new Object[][]{
                 {Data.email1,Data.nickname,true},
-                {Data.email2,Data.nickname, false},
-                {Data.email3,Data.nickname, true},
+                {Data.email2,Data.nickname,true},
+                {Data.email3,Data.nickname,true}
 
         };
     }
@@ -29,7 +29,7 @@ public class DataProviders {
         ArrayList<Object[]> out = new ArrayList<>();
         Files.readAllLines(Paths.get("RegistrationData.csv")).stream().forEach(s -> {
             String[] data = s.split(",");
-            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5], data[6]
+            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5]
             });
         });
         return out.toArray(new Object[out.size()][]);

@@ -1,11 +1,8 @@
 package com.romanceabroad.ui;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 public class SearchTests extends BaseUI {
@@ -21,7 +18,6 @@ public class SearchTests extends BaseUI {
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedurlsearch);
     }
-
     @Test(priority = 2, enabled = testCase5, groups = {"regression"})
     public void testDefaultDropdownTestCase2() {
         mainPage.getToSearchPeoplePage();
@@ -34,7 +30,6 @@ public class SearchTests extends BaseUI {
             mainPage.javaWaitSec(3);
         }
     }
-
     @Test(priority = 3, enabled = testCase6, groups = {"regression"})
     public void testAgeDropdownsTestCase3() {
         mainPage.getToSearchPeoplePage();
@@ -43,7 +38,6 @@ public class SearchTests extends BaseUI {
         //Fly-out menu
         searchPage.getToNews();
     }
-
     @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase20, groups = {"regression"})
     public void testDefaultDropdownTestCase4(String minAge, String maxAge, String sortBy) {
         int min = Integer.parseInt(minAge);
@@ -52,17 +46,19 @@ public class SearchTests extends BaseUI {
         System.out.println(max);
 
         mainPage.getToSearchPeoplePage();
-        searchPage.getDropDownListByText1(driver.findElement(Locators.DROPDOWNLIST_AGE_MIN), minAge);
-        searchPage.getDropDownListByText1(driver.findElement(Locators.DROPDOWNLIST_AGE_MAX), maxAge);
-        searchPage.getDropDownListByText1(driver.findElement(Locators.DROPDOWNLIST_SORT_BY), sortBy);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROPDOWNLIST_AGE_MIN), minAge);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROPDOWNLIST_AGE_MAX), maxAge);
+        searchPage.getDropDownListByText(driver.findElement(Locators.DROPDOWNLIST_SORT_BY), sortBy);
         searchPage.clickSearchButton();
         List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
         for (int i = 0; i < infoAboutUser.size(); i++) {
             WebElement text = infoAboutUser.get(i);
-            searchPage.ajaxScroll(text);
-            String info = infoAboutUser.get(i).getText();
+            String info = text.getText();
             System.out.println(info);
+            mainPage.javaWaitSec(3);
+            infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
         }
     }
+
 }
 

@@ -19,6 +19,7 @@ public class MainTests extends BaseUI {
         mainTabs= driver.findElements(Locators.TABS_MAINPAGE);
     }
 }
+
     @Test(priority= 1, enabled = testCase2, groups ={"smoke"})
     public void testMainPageTestCase2() {
         mainPage.requestTourInfo();
@@ -42,4 +43,5 @@ public class MainTests extends BaseUI {
         mainPage.ajaxClick(driver.findElement(Locators.JOIN_TODAY));
         softAssert.assertAll();
     }
+
 }

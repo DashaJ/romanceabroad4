@@ -25,7 +25,7 @@ public class Data {
 
     public static final String email1 = "fake@gmail.com";
     public static final String email2= "fa456ke@mail.ru";
-    public static final String email3 ="fake6878@inbox.com";
+    public static final String email3 ="fake6878inbox.com";
     public static final String nickname1part="Nick";
     public static final String nickname= MainPage.generateNewNumber(nickname1part, Data.lenghtsecondpartofnickname);
     //ContactUs Page
@@ -40,6 +40,21 @@ public class Data {
     public static final String expectedtitlehowweworkpage ="Advertising";
     public static final String expectedurlhowweworkpage ="https://romanceabroad.com/content/view/advertising";
 
+//Photos page //User tabs
+public static final String expectedTitleAll ="Ukrainian women photos";
+public static final String expectedTitleGallery ="Gallery";
+    public static final String expectedTitlePhotoGallery ="Photo gallery";
+    public static final String expectedTitleVideoGallery ="Video gallery";
+    public static final String expectedTitleGalleryAlbums ="Gallery albums";
+    public static final String textMedia ="No media";
+
+//Tour To Ukraine
+public static final String expectedTitleContactUs ="Contact administrator";
+    public static final String expectedTitleSiteMap = "Site map";
+    public static final String expectedTitleHowItWorks ="How it works";
+    public static final String expectedTitleNews = "News";
+    public static final String expectedTitlePrivacy = "Privacy Policy";
+    public static final String expectedTitleTermsOfUse = "Terms of use";
 
 
 }

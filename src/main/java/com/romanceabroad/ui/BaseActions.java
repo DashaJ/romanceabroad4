@@ -46,12 +46,12 @@ public class BaseActions {
         }
         return 0;
     }
-    public void getDropDownListByIndex1(WebElement element, int index){
+    public void getDropDownListByIndex(WebElement element, int index){
         Select select = new Select(element);
         select.selectByIndex(index);
     }
 
-    public void getDropDownListByValue1(WebElement element, String value){
+    public void getDropDownListByValue(WebElement element, String value){
         Select select = new Select(element);
         select.selectByValue(value);
     }
@@ -61,7 +61,7 @@ public class BaseActions {
         select.selectByValue(value);
     }
 
-    public void getDropDownListByText1(WebElement element, String text){
+    public void getDropDownListByText(WebElement element, String text){
         Select select = new Select(element);
         select.selectByVisibleText(text);
     }
@@ -81,7 +81,6 @@ public class BaseActions {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
-
 
     public void ajaxClick(By by) {
         wait.until(ExpectedConditions.elementToBeClickable(by));
@@ -117,6 +116,7 @@ public class BaseActions {
     }
 
     public void javaWaitSec(int sec) {
+        System.out.println("");
         try {
             Thread.sleep(sec * 1000);
         } catch (InterruptedException e) {
@@ -156,6 +156,11 @@ public class BaseActions {
             e.printStackTrace();
         }
     }
+    public String getAnyTitle(){
+        String title = driver.findElement(Locators.H1_TITLE).getText();
+        return title;
+    }
+
 }
 
 

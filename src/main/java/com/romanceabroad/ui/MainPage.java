@@ -1,9 +1,7 @@
 package com.romanceabroad.ui;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class MainPage extends BaseActions {
-
 
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
@@ -50,4 +48,4 @@ public class MainPage extends BaseActions {
     public void getToTourToUkraine() {
         driver.findElement(Locators.TOUR_TO_UKRAINE).click();
     }
-}
+    }

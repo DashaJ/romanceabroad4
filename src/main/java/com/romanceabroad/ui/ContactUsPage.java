@@ -21,7 +21,7 @@ public class ContactUsPage extends BaseActions {
         driver.findElement(Locators.YOUR_EMAIL).sendKeys(registration_email);
         driver.findElement(Locators.SUBJECT).sendKeys(subject);
         driver.findElement(Locators.MESSAGE).sendKeys(messagetext);
-        driver.findElement(Locators.SEND_BUTTON).click();
+        ajaxClick(Locators.SEND_BUTTON);
     }
 }
 

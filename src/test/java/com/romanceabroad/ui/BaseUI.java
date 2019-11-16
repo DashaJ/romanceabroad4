@@ -1,6 +1,4 @@
 package com.romanceabroad.ui;
-
-import com.romanceabroad.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -76,8 +74,8 @@ public class BaseUI {
         driver.manage().window().maximize();
         driver.get(mainUrl);
     }
-    @AfterMethod
-    public void tearDown() {
-       driver.quit();
-    }
+    //@AfterMethod
+   // public void tearDown() {
+     //  driver.quit();
+   // }
 }

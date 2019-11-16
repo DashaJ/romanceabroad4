@@ -24,7 +24,7 @@ public class RegistartionPage extends BaseActions {
 
    }
 
-    public void completeSecondRegistartionStep(String username, String days, String month, String year, String phone, String city
+    public void completeSecondRegistartionStep(String username, String days, String month, String year, String phone
                                                ) {
         driver.findElement(Locators.USERNAME_FIELD).sendKeys(username);
 
@@ -38,8 +38,6 @@ public class RegistartionPage extends BaseActions {
         checkValueOfLists(Locators.LIST_VALUE_YEAR, year);
 
         driver.findElement(Locators.PHONE).sendKeys(phone);
-        driver.findElement(Locators.AUTO_FILLING_LOCATION).clear();
-        driver.findElement(Locators.AUTO_FILLING_LOCATION).sendKeys(city);
 
 }
     public void checkValueOfLists(By locator, String text) {

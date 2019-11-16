@@ -3,8 +3,10 @@ package com.romanceabroad.ui;
 import org.openqa.selenium.By;
 
 public class Locators {
+
+    public static final By H1_TITLE= By.xpath("//h1");
     //Blog page
-    public static final By LINK_BLOG = By.cssSelector("a[@href='https://romanceabroad.com/content/view/blog']");
+    public static final By LINK_BLOG = By.xpath("a[@href='https://romanceabroad.com/content/view/blog']");
     public static final By ODESSA_DATING_AGENCY_LINK = By.xpath("//div[@class='info-menu-inner']");
     public static final By BLOG_CATEGORIES = By.xpath("//div[@class='info-content-block wysiwyg']//ul//li");
     //Gifts page
@@ -24,6 +26,10 @@ public class Locators {
     //Photos page
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROPDOWN_SORT_BY_PHOTOS = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");
+    public static final By LINK_TAB_USER_PROFILE= By.xpath("//ul[@id='gallery_filters']//a");
+    public static final By TEXT_ON_VIDEO_TAB = By.xpath("//div[@class='g-flatty-block'");
+    public static final By TEXT_ON_ALBUMS_TAB=By.xpath("//div[@class='main-inner-content']");
+    public static final By ALBUMS_TABS = By.xpath("//span[@data-click='album']");
     //Search page
     public static final By SEARCH_BUTTON_ONSEARCHWIDGET = By.cssSelector("#main_search_button_user_advanced");
     public static final By DEFAULT_DROPDOWN = By.xpath("//div[@class='form-inline']//select");
@@ -36,7 +42,7 @@ public class Locators {
     //Sign in Page
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
     public static final By FACEBOOK_LINK = By.xpath("//a[@href='https://romanceabroad.com/users_connections/oauth_login/1']");
-    public static final By FACEBOOK_LOGO = By.xpath("//i[@class='fb_logo img sp_lFwffOkkE26 sx_46e267']");
+    public static final By FACEBOOK_LOGO = By.xpath("//i[contains(@class, 'fb_logo')]");
     //Registration page
     public static final By PAYPAL_LINK = By.xpath("//a[@class='btn btn-primary btn-block']");
     public static final By REGISTRATION_BUTTON = By.xpath("//button[@id='show-registration-block']");

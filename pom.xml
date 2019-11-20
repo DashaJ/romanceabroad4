@@ -73,6 +73,11 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.automation-remarks</groupId>
+            <artifactId>video-recorder-testng</artifactId>
+            <version>1.0</version>
+        </dependency>
 
     </dependencies>
 </project>

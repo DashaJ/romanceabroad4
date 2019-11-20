@@ -51,7 +51,7 @@ public static final String expectedTitleGallery ="Gallery";
 //Tour To Ukraine
 public static final String expectedTitleContactUs ="Contact administrator";
     public static final String expectedTitleSiteMap = "Site map";
-    public static final String expectedTitleHowItWorks ="How it works";
+    public static final String expectedTitleHowItWorks ="Ukrainian women for marriage";
     public static final String expectedTitleNews = "News";
     public static final String expectedTitlePrivacy = "Privacy Policy";
     public static final String expectedTitleTermsOfUse = "Terms of use";

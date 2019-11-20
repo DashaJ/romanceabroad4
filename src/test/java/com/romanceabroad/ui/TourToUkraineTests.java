@@ -1,5 +1,4 @@
 package com.romanceabroad.ui;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -23,16 +22,17 @@ public class TourToUkraineTests extends BaseUI {
         mainPage.performClick(Locators.PAYPAL_LINK);
     }
 
-    @Test
+       @Test
     public void testFooter() {
         mainPage.getToTourToUkraine();
         mainPage.scrollToBottomOfPage();
         WebElement helpFooter = driver.findElement(By.xpath("//div[@id='footer-menu-title-0']"));
         WebElement aboutFooter = driver.findElement(By.xpath("//div[@id='footer-menu-title-1']"));
         WebElement privacypolicyFooter = driver.findElement(By.xpath("//div[@id='footer-menu-title-2']"));
-        if (helpFooter.getText().contains("Help") && (aboutFooter.getText().contains("About")
-                && (privacypolicyFooter.getText().contains("Privacy policy")))) {
+        if (helpFooter.getText().contains("HELP") && (aboutFooter.getText().contains("ABOUT")
+                && (privacypolicyFooter.getText().contains("PRIVACY POLICY")))) {
 
+            mainPage.javaWaitSec(3);
             List<WebElement> footertabs = driver.findElements(By.xpath("//div[@class='footer-menu-list-group-item-text']"));
             for (int i = 0; i < footertabs.size(); i++) {
                 footertabs.get(i).click();
@@ -50,11 +50,12 @@ public class TourToUkraineTests extends BaseUI {
                 } else if (i == 5) {
                     Assert.assertEquals(actualTitle, Data.expectedTitleTermsOfUse);
                 }
+                mainPage.scrollToBottomOfPage();
                 footertabs = driver.findElements(By.xpath("//div[@class='footer-menu-list-group-item-text']"));
             }
-        }else {
-                Assert.fail("Footer tabs dont display correctly");
-            }
+        } else {
+            Assert.fail("Footer tabs dont display correctly");
         }
     }
+}
 

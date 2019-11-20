@@ -22,7 +22,6 @@ public class PhotosTests extends BaseUI {
         mainPage.checkLinksOnWebPage("//a", "href");
         mainPage.checkLinksOnWebPage("//img", "src");
     }
-
     @Test
     public void testPhotosTabs() {
         mainPage.getToPhotosPage();
@@ -53,27 +52,17 @@ public class PhotosTests extends BaseUI {
             usertabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
         }
     }
-
     @Test
-    public void testTopGallery() {
+    public void testUserProfile() {
         mainPage.getToPhotosPage();
-        List<WebElement> topgalleryusertabs = driver.findElements(By.xpath("//div[@class='swiper-slide.slick-slide.slick-active']//a"));
-        for (int i = 0; i < topgalleryusertabs.size(); i++) {
-            //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='user-carousel-line']//div[@class='photo']")));
-            topgalleryusertabs.get(i).click();
-            String actualURL = driver.getCurrentUrl();
-            System.out.println(actualURL);
-
-           //String nameonprofile = photosPage.getAnyTitle();
-           // System.out.println(nameonprofile);
-            //Assert.assertTrue(driver.findElement(By.xpath("//button[@id='btn_write_message_149241']")).isDisplayed());
+        List<WebElement> userProfileList = driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//a[@class='g-users-gallery__name']"));
+        System.out.println(userProfileList.size());
+        for (int i = 0; i < userProfileList.size(); i++) {
+            WebElement profilename = userProfileList.get(i);
+            String nameOfUser =profilename.getText();
+            System.out.println(nameOfUser);
         }
-        topgalleryusertabs = driver.findElements(By.xpath("//div[@class='swiper-slide.slick-slide.slick-active']//a"));
+        userProfileList = driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//a[@class='g-users-gallery__name']"));
     }
-
-
-
-
-
 }
 

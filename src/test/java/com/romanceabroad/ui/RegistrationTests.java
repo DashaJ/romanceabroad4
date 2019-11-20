@@ -3,9 +3,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
+import org.testng.annotations.Listeners;
 
+@Listeners(VideoListener.class)
 public class RegistrationTests extends BaseUI {
 
+    @Video(name = "Registration Test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     //(priority= 1, enabled = testCase9, groups ={"smoke"})
     public void registrationTestCase2(String registration_email, String nickname, boolean requirment) {

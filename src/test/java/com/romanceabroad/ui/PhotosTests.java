@@ -55,12 +55,14 @@ public class PhotosTests extends BaseUI {
     @Test
     public void testUserProfile() {
         mainPage.getToPhotosPage();
+        mainPage.javaWaitSec(3);
         List<WebElement> userProfileList = driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//a[@class='g-users-gallery__name']"));
         System.out.println(userProfileList.size());
         for (int i = 0; i < userProfileList.size(); i++) {
             WebElement profilename = userProfileList.get(i);
             String nameOfUser =profilename.getText();
             System.out.println(nameOfUser);
+
         }
         userProfileList = driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//a[@class='g-users-gallery__name']"));
     }

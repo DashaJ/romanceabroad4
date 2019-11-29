@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.List;
 
 public class TourToUkraineTests extends BaseUI {
@@ -44,7 +43,9 @@ public class TourToUkraineTests extends BaseUI {
                 } else if (i == 2) {
                     Assert.assertEquals(actualTitle, Data.expectedTitleHowItWorks);
                 } else if (i == 3) {
-                    Assert.assertEquals(actualTitle, Data.expectedTitleNews);
+                    WebElement newsText = driver.findElement(By.xpath("//div[@class='title col-xs-12 col-sm-6 col-md-9 col-lg-9'] "));
+                   String actualnewsText1= newsText.getText();
+                    Assert.assertEquals(actualnewsText1, Data.expectednewsText);
                 } else if (i == 4) {
                     Assert.assertEquals(actualTitle, Data.expectedTitlePrivacy);
                 } else if (i == 5) {

@@ -7,6 +7,12 @@ public class Data {
     public static final String registration_email = "fake@fakeemail.com";
     public static final String registration_password = "25021988D";
     public static final String expectedgiftsPage = "https://romanceabroad.com/store/category-sweets";
+    public static final String signinpassword1 = "8078";
+    public static final String signinemail1 = "hfkdhk@mail.ru";
+    public static final String signinpassword2 = "5074598";
+    public static final String signinemail2 = "25jhs@gmail.com";
+    public static final String signinpassword3 = "60085";
+    public static final String signinemail3 = "test@me.com";
     //Blog page
     public static final int indexodessadatingAgency = 4;
     public static final String expectedblogpageURL = "https://romanceabroad.com/content/view/blog";
@@ -55,6 +61,7 @@ public static final String expectedTitleContactUs ="Contact administrator";
     public static final String expectedTitleNews = "News";
     public static final String expectedTitlePrivacy = "Privacy Policy";
     public static final String expectedTitleTermsOfUse = "Terms of use";
+    public static final String expectednewsText ="News";
 
 
 }

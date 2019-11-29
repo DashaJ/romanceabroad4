@@ -22,6 +22,7 @@ public class PhotosTests extends BaseUI {
         mainPage.checkLinksOnWebPage("//a", "href");
         mainPage.checkLinksOnWebPage("//img", "src");
     }
+
     @Test
     public void testPhotosTabs() {
         mainPage.getToPhotosPage();
@@ -52,19 +53,26 @@ public class PhotosTests extends BaseUI {
             usertabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
         }
     }
+
     @Test
     public void testUserProfile() {
         mainPage.getToPhotosPage();
         mainPage.javaWaitSec(3);
         List<WebElement> userProfileList = driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//a[@class='g-users-gallery__name']"));
-        System.out.println(userProfileList.size());
-        for (int i = 0; i < userProfileList.size(); i++) {
-            WebElement profilename = userProfileList.get(i);
-            String nameOfUser =profilename.getText();
-            System.out.println(nameOfUser);
-
+        mainPage.javaWaitSec(3);
+        if (userProfileList.size() > 1) {
+            for (int i = 0; i < userProfileList.size(); i++) {
+                WebElement profilename = userProfileList.get(i);
+                String nameOfUser = profilename.getText();
+                System.out.println(nameOfUser);
+            }
+        } else {
+            System.out.println("There are " + userProfileList.size() + "user profiles on the page");
         }
         userProfileList = driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//a[@class='g-users-gallery__name']"));
+
     }
 }
+
+
 

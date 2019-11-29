@@ -5,6 +5,16 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class DataProviders {
+
+    @org.testng.annotations.DataProvider(name = "Sign In")
+    public static Object[][] testSignIn() {
+        return new Object[][]{
+                {Data.signinemail1,Data.signinpassword1,true},
+                {Data.signinemail2,Data.signinpassword2,true},
+                {Data.signinemail3,Data.signinpassword3,true}
+
+        };
+    }
     @org.testng.annotations.DataProvider(name = "Registration2")
     public static Object[][] testRegistration2() {
         return new Object[][]{

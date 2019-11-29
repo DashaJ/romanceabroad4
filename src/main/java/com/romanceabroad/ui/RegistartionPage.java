@@ -49,7 +49,6 @@ public class RegistartionPage extends BaseActions {
                 elementOfList.click();
             }
 
-
         }
 
     }

@@ -42,6 +42,11 @@ public class Locators {
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
     public static final By FACEBOOK_LINK = By.xpath("//a[@href='https://romanceabroad.com/users_connections/oauth_login/1']");
     public static final By FACEBOOK_LOGO = By.xpath("//i[contains(@class, 'fb_logo')]");
+    public static final By SIGNIN_EMAIL = By.xpath("//input[@name='email']");
+    public static final By SIGNIN_PASSWORD = By.xpath("//div[@class='col-xs-8']//input[@id='password']");
+    public static final By SIGN_IN_NAV = By.xpath("//a[contains(text(),'SIGN IN')]");
+    public static final By SUBMIT_SIGNIN = By.xpath("//button[@type='submit']");
+
     //Registration page
     public static final By PAYPAL_LINK = By.xpath("//a[@class='btn btn-primary btn-block']");
     public static final By REGISTRATION_BUTTON = By.xpath("//button[@id='show-registration-block']");

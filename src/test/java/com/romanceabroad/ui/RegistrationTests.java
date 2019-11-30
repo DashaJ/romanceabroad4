@@ -15,9 +15,11 @@ public class RegistrationTests extends BaseUI {
     //(priority= 1, enabled = testCase9, groups ={"smoke"})
     public void registrationTestCase2(String registration_email, String nickname, boolean requirment) {
 
+        Reports.log("Click Join for free button");
         mainPage.clickjoinForFreeNow();
         registrationPage.registrationFirstStep(registration_email, Data.registration_password);
         if (!requirment) {
+            Reports.log("Error message is not displayed");
             Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
         } else {
             registrationPage.clickNextButton();
@@ -29,9 +31,13 @@ public class RegistrationTests extends BaseUI {
     @Test(dataProvider = "Registration1", dataProviderClass = DataProviders.class)
     //(priority= 1, enabled = testCase9, groups ={"smoke"})
     public void registrationTestCase9(String registration_email, String registration_password, String day, String month, String year, String phone) {
+        Reports.log("Click Join for free button");
         mainPage.clickjoinForFreeNow();
+        Reports.log("Type email and password");
         registrationPage.registrationFirstStep(registration_email, registration_password);
+        Reports.log("Click Next button");
         registrationPage.clickNextButton();
+        Reports.log("Fill username,day,month,year,phone ");
         registrationPage.completeSecondRegistartionStep(mainPage.generateNewNumber(Data.username, 5), day, month,
                 year, phone);
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(Locators.CHECKBOX_CONFIRMATION)));

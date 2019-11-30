@@ -94,11 +94,17 @@ public class BaseActions {
     }
 
     public void checkValueOfLists(By locator, String text) {
+        Reports.log("Collect elements in a list");
         List<WebElement> elements = driver.findElements(locator);
+        Reports.log("Start looping");
         for (int i = 0; i < elements.size(); i++) {
+            Reports.log("Select new element from the list");
             WebElement elementOfList = elements.get(i);
             String value = elementOfList.getText();
             if (value.contains(text)) {
+                Reports.log("Wait for the list be clickable");
+                wait.until(ExpectedConditions.elementToBeClickable(elementOfList));
+                Reports.log("Click on new element inteh list");
                 elementOfList.click();
             }
         }

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="7" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestSuite" duration-ms="552296" started-at="2019-11-24T20:28:12Z" finished-at="2019-11-24T20:37:24Z">
+    <groups>
+      <group name="regression">
+        <method signature="SearchTests.testAgeDropdownsTestCase3()[pri:3, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testAgeDropdownsTestCase3" class="com.romanceabroad.ui.SearchTests"/>
+        <method signature="SearchTests.testDefaultDropdownTestCase4(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testDefaultDropdownTestCase4" class="com.romanceabroad.ui.SearchTests"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="SearchTests.testSearchPageTestCase1()[pri:1, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testSearchPageTestCase1" class="com.romanceabroad.ui.SearchTests"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="ChromeTestCases" duration-ms="552296" started-at="2019-11-24T20:28:12Z" finished-at="2019-11-24T20:37:24Z">
+      <class name="com.romanceabroad.ui.SearchTests">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="setup" is-config="true" duration-ms="36919" started-at="2019-11-24T20:28:12Z" finished-at="2019-11-24T20:28:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.SearchTests.testSearchPageTestCase1()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testSearchPageTestCase1()[pri:1, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testSearchPageTestCase1" duration-ms="17454" started-at="2019-11-24T20:28:49Z" finished-at="2019-11-24T20:29:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchPageTestCase1 -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="setup" is-config="true" duration-ms="41728" started-at="2019-11-24T20:29:06Z" finished-at="2019-11-24T20:29:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.SearchTests.testAgeDropdownsTestCase3()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testAgeDropdownsTestCase3()[pri:3, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testAgeDropdownsTestCase3" duration-ms="23208" started-at="2019-11-24T20:29:48Z" finished-at="2019-11-24T20:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAgeDropdownsTestCase3 -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="setup" is-config="true" duration-ms="27740" started-at="2019-11-24T20:30:11Z" finished-at="2019-11-24T20:30:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.SearchTests.testDefaultDropdownTestCase4(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testDefaultDropdownTestCase4(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testDefaultDropdownTestCase4" duration-ms="82221" started-at="2019-11-24T20:30:39Z" data-provider="Search" finished-at="2019-11-24T20:32:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[80]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Default]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefaultDropdownTestCase4 -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="setup" is-config="true" duration-ms="25625" started-at="2019-11-24T20:32:01Z" finished-at="2019-11-24T20:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.SearchTests.testDefaultDropdownTestCase4(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testDefaultDropdownTestCase4(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testDefaultDropdownTestCase4" duration-ms="85920" started-at="2019-11-24T20:32:27Z" data-provider="Search" finished-at="2019-11-24T20:33:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefaultDropdownTestCase4 -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="setup" is-config="true" duration-ms="31167" started-at="2019-11-24T20:33:53Z" finished-at="2019-11-24T20:34:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.SearchTests.testDefaultDropdownTestCase4(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testDefaultDropdownTestCase4(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testDefaultDropdownTestCase4" duration-ms="92692" started-at="2019-11-24T20:34:24Z" data-provider="Search" finished-at="2019-11-24T20:35:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[40]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Views]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefaultDropdownTestCase4 -->
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="setup" is-config="true" duration-ms="60183" started-at="2019-11-24T20:35:57Z" finished-at="2019-11-24T20:36:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.SearchTests.testDefaultDropdownTestCase4(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testDefaultDropdownTestCase4(java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:com.romanceabroad.ui.SearchTests@34b7bfc0]" name="testDefaultDropdownTestCase4" duration-ms="27358" started-at="2019-11-24T20:36:57Z" data-provider="Search" finished-at="2019-11-24T20:37:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[80]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Registration date]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefaultDropdownTestCase4 -->
+      </class> <!-- com.romanceabroad.ui.SearchTests -->
+    </test> <!-- ChromeTestCases -->
+  </suite> <!-- TestSuite -->
+</testng-results>

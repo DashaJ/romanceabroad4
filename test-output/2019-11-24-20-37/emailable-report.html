@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">TestSuite</th></tr>
+<tr><td><a href="#t0">ChromeTestCases</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">440,821</td><td>regression, smoke</td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTestCases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.romanceabroad.ui.SearchTests</td><td><a href="#m0">testDefaultDropdownTestCase4</a></td><td rowspan="1">1574628023326</td><td rowspan="1">15124</td></tr><tr><th colspan="4">ChromeTestCases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.romanceabroad.ui.SearchTests</td><td><a href="#m1">testAgeDropdownsTestCase3</a></td><td rowspan="1">1574627963364</td><td rowspan="1">26511</td></tr><tr class="passedeven"><td><a href="#m2">testDefaultDropdownTestCase4</a></td><td rowspan="3">1574628069739</td><td rowspan="3">91339</td></tr><tr class="passedeven"><td><a href="#m3">testDefaultDropdownTestCase4</a></td></tr><tr class="passedeven"><td><a href="#m4">testDefaultDropdownTestCase4</a></td></tr><tr class="passedeven"><td><a href="#m5">testSearchPageTestCase1</a></td><td rowspan="1">1574627914229</td><td rowspan="1">9907</td></tr></tbody>
+</table>
+<h2>ChromeTestCases</h2><h3 id="m0">com.romanceabroad.ui.SearchTests#testDefaultDropdownTestCase4</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>18</td><td>80</td><td>Default</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=78.0.3904.108)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-TUM767L&apos;, ip: &apos;192.168.1.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\OJWIND~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62041}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7fd50f1ad3591102081364b790769667
+*** Element info: {Using=xpath, value=//div[@class=&apos;col-xs-5 no-padding-left&apos;]//select[@id=&apos;age_min&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.romanceabroad.ui.SearchTests.testDefaultDropdownTestCase4(SearchTests.java:49)
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.romanceabroad.ui.SearchTests#testAgeDropdownsTestCase3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.romanceabroad.ui.SearchTests#testDefaultDropdownTestCase4</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>25</td><td>50</td><td>Name</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.romanceabroad.ui.SearchTests#testDefaultDropdownTestCase4</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>40</td><td>60</td><td>Views</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.romanceabroad.ui.SearchTests#testDefaultDropdownTestCase4</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>60</td><td>80</td><td>Registration date</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.romanceabroad.ui.SearchTests#testSearchPageTestCase1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

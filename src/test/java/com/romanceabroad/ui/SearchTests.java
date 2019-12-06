@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class SearchTests extends BaseUI {
+public class SearchTests extends BaseUIWithSauceLabs {
     public static final boolean testCase4 = true;
     public static final boolean testCase5 = false;
     public static final boolean testCase6 = true;

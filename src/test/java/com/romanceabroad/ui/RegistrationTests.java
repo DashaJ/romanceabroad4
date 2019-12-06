@@ -8,7 +8,7 @@ import com.automation.remarks.video.annotations.Video;
 import org.testng.annotations.Listeners;
 
 @Listeners(VideoListener.class)
-public class RegistrationTests extends BaseUI {
+public class RegistrationTests extends BaseUIWithSauceLabs {
 
     @Video(name = "Registration Test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)

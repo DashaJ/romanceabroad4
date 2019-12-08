@@ -43,7 +43,7 @@ public class TourToUkraineTests extends BaseUI {
                 } else if (i == 2) {
                     Assert.assertEquals(actualTitle, Data.expectedTitleHowItWorks);
                 } else if (i == 3) {
-                    WebElement newsText = driver.findElement(By.xpath("//div[@class='title col-xs-12 col-sm-6 col-md-9 col-lg-9'] "));
+                    WebElement newsText = driver.findElement(By.xpath("//div[@class='col-xs-12 col-sm-12 col-md-9 col-lg-9']//div[@class='empty']"));
                    String actualnewsText1= newsText.getText();
                     Assert.assertEquals(actualnewsText1, Data.expectednewsText);
                 } else if (i == 4) {

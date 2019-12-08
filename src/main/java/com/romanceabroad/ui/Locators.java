@@ -26,7 +26,7 @@ public class Locators {
     public static final By LINK_PHOTOS = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROPDOWN_SORT_BY_PHOTOS = By.xpath("//span[@id='gallery_media_sorter']//select[@class='form-control']");
     public static final By LINK_TAB_USER_PROFILE= By.xpath("//ul[@id='gallery_filters']//a");
-    public static final By TEXT_ON_VIDEO_TAB = By.xpath("//div[@class='g-flatty-block'");
+    public static final By TEXT_ON_VIDEO_TAB = By.xpath("//h1[contains(text(),'Video gallery')]");
     public static final By TEXT_ON_ALBUMS_TAB=By.xpath("//div[@class='main-inner-content']");
     public static final By ALBUMS_TABS = By.xpath("//span[@data-click='album']");
     //Search page
@@ -38,6 +38,7 @@ public class Locators {
     public static final By DROPDOWNLIST_AGE_MIN = By.xpath("//div[@class='col-xs-5 no-padding-left']//select[@id='age_min']");
     public static final By DROPDOWNLIST_AGE_MAX = By.xpath("//div[@class='col-xs-5 no-padding-right']//select[@name='age_max']");
     public static final By CONTACT_US = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-tickets-item']//div[1]");
+    public static final By TEXT_USER_PROFILE = By.xpath( "//div[@class='text-overflow']");
     //Sign in Page
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
     public static final By FACEBOOK_LINK = By.xpath("//a[@href='https://romanceabroad.com/users_connections/oauth_login/1']");

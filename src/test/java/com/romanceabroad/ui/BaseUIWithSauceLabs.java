@@ -26,6 +26,8 @@ public class BaseUIWithSauceLabs {
     BlogPage blogPage;
     PhotosPage photosPage;
     RegistartionPage registrationPage;
+    SignUpOnFlyOutPage signUpOnFlyOutPage;
+    GiftsPage giftsPage;
     SoftAssert softAssert = new SoftAssert();
     @BeforeMethod
     @Parameters({"browser","version","platform"})
@@ -45,6 +47,8 @@ public void setup(String browser, String version,String platform, Method method)
         wait =new WebDriverWait(driver, 20);
         registrationPage = new RegistartionPage(driver, wait);
         mainPage= new MainPage(driver, wait);
+        signUpOnFlyOutPage = new SignUpOnFlyOutPage(driver, wait);
+        giftsPage =new GiftsPage(driver, wait);
         searchPage= new SearchPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         photosPage = new PhotosPage(driver, wait);
@@ -53,6 +57,7 @@ public void setup(String browser, String version,String platform, Method method)
     }
     @AfterMethod
     public void tearDown(ITestResult testResult) {
+        //local reports
         if(testResult.getStatus() == ITestResult.FAILURE){
             Reports.fail(driver,testResult.getName());
         }

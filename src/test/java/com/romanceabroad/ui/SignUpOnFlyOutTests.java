@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SignUpOnFlyOutTests extends BaseUI {
+public class SignUpOnFlyOutTests extends BaseUIWithSauceLabs {
     public static final boolean testCase13 = true;
 
     @Test(priority= 1, enabled = testCase13, groups ={"regression"})

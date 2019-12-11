@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GiftsTests extends BaseUI {
+public class GiftsTests extends BaseUIWithSauceLabs {
     public static final boolean testCase12 = true;
 
     @Test(priority= 1, enabled = testCase12, groups ={"regression"})

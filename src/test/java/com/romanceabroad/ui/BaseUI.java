@@ -37,6 +37,7 @@ public class BaseUI {
     SoftAssert softAssert = new SoftAssert();
 
     protected TestBox testBox;
+    //protected TestBrowser testBrowser;
 
     protected enum TestBox {
         LOCAL, SAUCE
@@ -44,9 +45,10 @@ public class BaseUI {
     @BeforeMethod(groups = {"search", "admin", "user"}, alwaysRun = true)
     @Parameters({"browser", "version", "testbox", "platform"})
 
-    public void setup(@Optional("chrome") String browser, @Optional("null") String version, @Optional("null") String platform, String box, Method method) throws MalformedURLException {
+    public void setup(@Optional("chrome") String browser, @Optional("null") String version, @Optional("null") String platform, @Optional("null") String box,@Optional("null") Method method) throws MalformedURLException {
         Reports.start(method.getDeclaringClass().getName() + " :" + method.getName());
-        if (box.equalsIgnoreCase("local")) {
+
+        if (box.equalsIgnoreCase( "local")) {
             testBox = TestBox.LOCAL;
         } else if (box.equalsIgnoreCase("sauce")) {
             testBox = TestBox.SAUCE;

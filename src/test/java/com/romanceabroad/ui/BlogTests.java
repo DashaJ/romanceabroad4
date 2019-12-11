@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class BlogTests extends BaseUI {
+public class BlogTests extends BaseUIWithSauceLabs {
     public static final boolean testCase10 = true;
     public static final boolean testCase11 = true;
     String currentBlogPageURL;

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class MainTests extends BaseUI {
+public class MainTests extends BaseUIWithSauceLabs {
     public static final boolean testCase1 = true;
     public static final boolean testCase2 = true;
     public static final boolean testCase3 = true;

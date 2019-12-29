@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Mobile test" parallel="none" >
+
+    <test name="GalaxyS5TestCases">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="testbox" value="mobile"/>
+        <parameter name="deviceName" value="Galaxy S5"/>
+
+
+        <classes>
+            <class name="com.romanceabroad.ui.TourToUkraineTests">
+            </class>
+        </classes>
+    </test>
+</suite>

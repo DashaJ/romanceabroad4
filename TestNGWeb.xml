@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="WebTestSuite" parallel="none" >
+
+
+   <test name="ChromeTestCases">
+       <parameter name="browser" value="chrome"/>
+        <parameter name="testbox" value="web"/>
+       <parameter name="platform" value="Windows 10"/>
+       <parameter name="version" value="59.0"/>
+
+
+
+        <classes>
+            <class name="com.romanceabroad.ui.TourToUkraineTests">
+            </class>
+        </classes>
+    </test>
+
+</suite>
+

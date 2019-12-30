@@ -2,6 +2,11 @@ package com.romanceabroad.ui;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class MainPage extends BaseActions {
+    public void clickMobileMenu(String valueOfBox) {
+        if (valueOfBox.contains("mobile")) {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
 
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);

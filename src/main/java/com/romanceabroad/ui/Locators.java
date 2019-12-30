@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 public class Locators {
 
     public static final By H1_TITLE= By.xpath("//h1");
+    public static final By MOBILE_MENU= By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     //Blog page
     public static final By LINK_BLOG = By.xpath("a[@href='https://romanceabroad.com/content/view/blog']");
     public static final By ODESSA_DATING_AGENCY_LINK = By.xpath("//div[@class='info-menu-inner']");
@@ -39,6 +40,7 @@ public class Locators {
     public static final By DROPDOWNLIST_AGE_MAX = By.xpath("//div[@class='col-xs-5 no-padding-right']//select[@name='age_max']");
     public static final By CONTACT_US = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-tickets-item']//div[1]");
     public static final By TEXT_USER_PROFILE = By.xpath( "//div[@class='text-overflow']");
+    public static final By MOBILE_LINK_PARAMETERS = By.xpath("//div[@class='search-param-button mb10']//a");
     //Sign in Page
     public static final By LOGIN_ON_THE_FLYOUT = By.xpath("//a[@id='user_main-menu-login-item']");
     public static final By FACEBOOK_LINK = By.xpath("//a[@href='https://romanceabroad.com/users_connections/oauth_login/1']");

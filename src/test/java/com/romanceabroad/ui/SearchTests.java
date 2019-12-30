@@ -2,10 +2,11 @@ package com.romanceabroad.ui;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class SearchTests extends BaseUIWithSauceLabs {
+public class SearchTests extends BaseUI {
     public static final boolean testCase4 = true;
     public static final boolean testCase5 = false;
     public static final boolean testCase6 = true;
@@ -20,11 +21,16 @@ public class SearchTests extends BaseUIWithSauceLabs {
     }
     @Test(priority = 2, enabled = testCase5, groups = {"regression"})
     public void testDefaultDropdownTestCase2() {
+        String value = valueOfBox;
+        mainPage.clickMobileMenu(valueOfBox);
+//        if(value.contains("mobile")){
+//            driver.findElement(Locators.MOBILE_MENU).click();
+//        }
         mainPage.getToSearchPeoplePage();
 
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DEFAULT_DROPDOWN);
         System.out.println(sizeOfDropDownListSortBy);
-
+        searchPage.clickSearchParameters(valueOfBox);
         for (int i = 0; i < sizeOfDropDownListSortBy; i++) {
             mainPage.selectItemDropDownRandomOption(Locators.DEFAULT_DROPDOWN, "Sort by");
             mainPage.javaWaitSec(3);

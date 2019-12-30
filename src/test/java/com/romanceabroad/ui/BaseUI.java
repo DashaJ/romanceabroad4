@@ -44,6 +44,8 @@ public class BaseUI {
     protected TestBox testBox;
     protected TestBrowser testBrowser;
 
+    protected String valueOfBox;
+
     protected enum TestBox {
         WEB, MOBILE, SAUCE
     }
@@ -53,11 +55,12 @@ public class BaseUI {
     }
 
     @BeforeMethod(groups = {"search", "admin", "user"}, alwaysRun = true)
-    @Parameters({"browser", "testBox", "platform", "version", "deviceName"})
+    @Parameters({"browser", "testBox", "platform", "version", "deviceName", "testEnv"})
 
-    public void setup(@Optional("chrome") String browser, @Optional("web") String box,
+    public void setup(@Optional("chrome") String browser, @Optional("local") String box,
                       @Optional("null") String platform,
                       @Optional("null") String version, @Optional("null") String device,
+                      @Optional("qa")String env,
                       Method method, ITestContext context) throws MalformedURLException {
         Reports.start(method.getDeclaringClass().getName() + " :" + method.getName());
 
@@ -101,6 +104,7 @@ public class BaseUI {
                         driver.get("chrome://settings/clearBrowserData");
                         break;
                 }
+                driver.manage().window().maximize();
                 break;
 
             case MOBILE:
@@ -134,7 +138,6 @@ public class BaseUI {
             default:
         }
 
-
         wait = new WebDriverWait(driver, 20);
         mainPage = new MainPage(driver, wait);
         searchPage = new SearchPage(driver, wait);
@@ -149,9 +152,15 @@ public class BaseUI {
         contactUsPage = new ContactUsPage(driver, wait);
         driver.manage().window().maximize();
         driver.get(mainUrl);
-
+        if (env.contains("qa")) {
+            driver.get(Data.mainUrl);
+        }else if(env.contains("uat")){
+            driver.get("https://www.google.com/");
+        }else if(env.contains("prod")) {
+            driver.get("https://www.yahoo.com/");
+        }
+          valueOfBox = box;
     }
-
     @AfterMethod
     public void afterActions(ITestResult testResult) {
         if (testResult.getStatus() == ITestResult.FAILURE) {

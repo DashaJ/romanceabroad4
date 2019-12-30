@@ -4,6 +4,8 @@
 
 
    <test name="ChromeTestCases">
+       <parameter name="testEnv" value="uat"/>
+
        <parameter name="browser" value="chrome"/>
         <parameter name="testbox" value="web"/>
        <parameter name="platform" value="Windows 10"/>

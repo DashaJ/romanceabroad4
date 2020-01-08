@@ -23,7 +23,7 @@ public class SignInTests extends BaseUI {
         }
     }
 
-    @Test(priority= 3, enabled = testCase12, groups ={"regression"})
+    @Test
     public void testSignInPageTestCase12() {
         mainPage.logInUsingFacebook();
         signInPage.getFacebookLogo();

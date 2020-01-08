@@ -4,10 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SignUpOnFlyOutTests extends BaseUIWithSauceLabs {
+public class SignUpOnFlyOutTests extends BaseUI {
     public static final boolean testCase13 = true;
 
-    @Test(priority= 1, enabled = testCase13, groups ={"regression"})
+    @Test
     public void testSignUpOnFlyOut() {
         mainPage.getTotheSignUpOnFlyOut();
         signUpOnFlyOutPage.fillRegistrationInfoFirstStep();

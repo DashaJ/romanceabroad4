@@ -20,7 +20,7 @@ public class DataProviders {
         return new Object[][]{
                 {Data.email1,Data.nickname,true},
                 {Data.email2,Data.nickname,true},
-                {Data.email3,Data.nickname,true}
+                {Data.email3,Data.nickname,false}
 
         };
     }

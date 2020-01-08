@@ -10,7 +10,7 @@ public class MainTests extends BaseUI {
     public static final boolean testCase2 = true;
     public static final boolean testCase3 = true;
 
-    @Test(priority= 1, enabled = testCase1, groups ={"smoke"})
+    @Test
     public void smokeTestForTheMainPageTestCase1(){
     List<WebElement> mainTabs= driver.findElements(Locators.TABS_MAINPAGE);
     for (int i = 0; i <mainTabs.size() ; i++) {
@@ -20,7 +20,7 @@ public class MainTests extends BaseUI {
     }
 }
 
-    @Test(priority= 1, enabled = testCase2, groups ={"smoke"})
+    @Test
     public void testMainPageTestCase2() {
         mainPage.requestTourInfo();
         String actualtitlemainpage = driver.getTitle();
@@ -29,7 +29,7 @@ public class MainTests extends BaseUI {
         //Verify that com.romanceabroad.ui.MainPage has correct title
         softAssert.assertEquals(actualtitlemainpage, expectedtitlemainpage);
     }
-    @Test(priority= 1, enabled = testCase3, groups ={"regression"})
+    @Test
     public void youtubeTestCase3() {
         WebElement ele = driver.findElement(Locators.IFRAMELOCATOR);
         driver.switchTo().frame(ele);

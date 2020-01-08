@@ -6,7 +6,7 @@ public class Locators {
     public static final By H1_TITLE= By.xpath("//h1");
     public static final By MOBILE_MENU= By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     //Blog page
-    public static final By LINK_BLOG = By.xpath("a[@href='https://romanceabroad.com/content/view/blog']");
+    public static final By LINK_BLOG = By.xpath("//li//a[@href='https://romanceabroad.com/content/view/blog']");
     public static final By ODESSA_DATING_AGENCY_LINK = By.xpath("//div[@class='info-menu-inner']");
     public static final By BLOG_CATEGORIES = By.xpath("//div[@class='info-content-block wysiwyg']//ul//li");
     //Gifts page
@@ -80,7 +80,7 @@ public class Locators {
     public static final By SEND_BUTTON = By.xpath("//input[@value='Send']");
     public static final By ERROR_ALERT = By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
     //Tours To Ukraine Page
-    public static final By TOUR_TO_UKRAINE = By.xpath("//a[contains(text(),'TOUR TO UKRAINE')]");
+    public static final By TOUR_TO_UKRAINE = By.xpath("//ul//a[contains(text(),'TOUR TO UKRAINE')]");
     public static final By SEARCH_BUTTON_ON_TOURS_TO_UKRAINE_PAGE = By.cssSelector("button#search_friend");
     public static final By SEARCH_FIELD_ON_TOURS_TO_UKRAINE_PAGE = By.cssSelector("input#search_product");
     public static final By RESULT_OF_THE_SEARCH = By.xpath("//div[@class='store-main-block']//h2");

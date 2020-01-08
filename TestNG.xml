@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="WebTestSuite" parallel="none" >
+
+
+
+    <test name="ChromeTestCases">
+        <parameter name="testbox" value="local"/>
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="58.0"/>
+        <parameter name="platform" value="Windows 10"/>
+
+        <classes>
+            <class name="com.romanceabroad.ui.ArrayListsHomework"/>
+            <class name="com.romanceabroad.ui.BlogTests"/>
+            <class name="com.romanceabroad.ui.ContactUsTests"/>
+            <class name="com.romanceabroad.ui.GiftsTests"/>
+            <class name="com.romanceabroad.ui.HowWeWorkTests"/>
+            <class name="com.romanceabroad.ui.MainTests"/>
+            <class name="com.romanceabroad.ui.PhotosTests"/>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SearchTests"/>
+            <class name="com.romanceabroad.ui.SignInTests"/>
+            <class name="com.romanceabroad.ui.SignUpOnFlyOutPage"/>
+            <class name="com.romanceabroad.ui.TourToUkraineTests"/>
+
+        </classes>
+    </test>
+
+</suite>

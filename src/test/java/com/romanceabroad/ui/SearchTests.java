@@ -1,9 +1,11 @@
 package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
+
 import java.util.List;
 
 public class SearchTests extends BaseUI {
@@ -12,31 +14,28 @@ public class SearchTests extends BaseUI {
     public static final boolean testCase6 = true;
     public static final boolean testCase20 = true;
 
-    @Test(priority = 1, enabled = testCase4, groups = {"smoke"})
+    @Test
     public void testSearchPageTestCase1() {
         mainPage.getToSearchPeoplePage();
         String currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
         Assert.assertEquals(currentUrlSearch, Data.expectedurlsearch);
     }
-    @Test(priority = 2, enabled = testCase5, groups = {"regression"})
+
+    @Test
     public void testDefaultDropdownTestCase2() {
-        String value = valueOfBox;
-        mainPage.clickMobileMenu(valueOfBox);
-//        if(value.contains("mobile")){
-//            driver.findElement(Locators.MOBILE_MENU).click();
-//        }
         mainPage.getToSearchPeoplePage();
 
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DEFAULT_DROPDOWN);
         System.out.println(sizeOfDropDownListSortBy);
-        searchPage.clickSearchParameters(valueOfBox);
+
         for (int i = 0; i < sizeOfDropDownListSortBy; i++) {
             mainPage.selectItemDropDownRandomOption(Locators.DEFAULT_DROPDOWN, "Sort by");
             mainPage.javaWaitSec(3);
         }
     }
-    @Test(priority = 3, enabled = testCase6, groups = {"regression"})
+
+    @Test
     public void testAgeDropdownsTestCase3() {
         mainPage.getToSearchPeoplePage();
         searchPage.fillMinMaxAge();
@@ -44,6 +43,7 @@ public class SearchTests extends BaseUI {
         //Fly-out menu
         searchPage.getToNews();
     }
+
     @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase20, groups = {"regression"})
     public void testDefaultDropdownTestCase4(String minAge, String maxAge, String sortBy) {
         int min = Integer.parseInt(minAge);
@@ -59,7 +59,7 @@ public class SearchTests extends BaseUI {
         List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_USER_PROFILE);
 
         for (int i = 0; i < infoAboutUser.size(); i++) {
-            if(i % 2 ==0) {
+            if (i % 2 == 0) {
                 WebElement text = infoAboutUser.get(i);
                 String info = text.getText();
                 String[] splitedPhrase = info.split(",");

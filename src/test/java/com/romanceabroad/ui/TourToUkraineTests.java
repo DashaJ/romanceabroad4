@@ -8,7 +8,7 @@ import java.util.List;
 public class TourToUkraineTests extends BaseUI {
     public static final boolean testCase14 = true;
 
-    @Test(priority = 3, enabled = testCase14, groups = {"regression"})
+    @Test
     public void testTourToUkrainePage() {
         mainPage.getToTourToUkraine();
         tourToUkrainePage.performSearchOnItemAndVerifyResult();

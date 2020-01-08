@@ -8,17 +8,17 @@ import com.automation.remarks.video.annotations.Video;
 import org.testng.annotations.Listeners;
 
 @Listeners(VideoListener.class)
-public class RegistrationTests extends BaseUIWithSauceLabs {
+public class RegistrationTests extends BaseUI {
 
     @Video(name = "Registration Test")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
     //(priority= 1, enabled = testCase9, groups ={"smoke"})
-    public void registrationTestCase2(String registration_email, String nickname, boolean requirment) {
+    public void registrationTestCase2(String registration_email, String nickname, boolean requirement) {
 
         Reports.log("Click Join for free button");
         mainPage.clickjoinForFreeNow();
         registrationPage.registrationFirstStep(registration_email, Data.registration_password);
-        if (!requirment) {
+        if (!requirement) {
             Reports.log("Error message is not displayed");
             Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
         } else {

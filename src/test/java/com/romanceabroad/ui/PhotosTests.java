@@ -11,13 +11,13 @@ public class PhotosTests extends BaseUI {
     public static final boolean testCase8 = true;
     String actualTitle;
 
-    @Test(priority = 1, enabled = testCase7, groups = {"regression"})
+    @Test(groups = {"regression"})
     public void PhotosPagetestCase7() {
         mainPage.getToPhotosPage();
         photosPage.clickOnDropdownViewsCount();
     }
 
-    @Test(priority = 1, enabled = testCase8, groups = {"regression"})
+    @Test(groups = {"regression"})
     public void LinksOnPhotosPagetestCase8() {
         mainPage.checkLinksOnWebPage("//a", "href");
         mainPage.checkLinksOnWebPage("//img", "src");

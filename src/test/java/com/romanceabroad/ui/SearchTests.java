@@ -44,7 +44,7 @@ public class SearchTests extends BaseUI {
         searchPage.getToNews();
     }
 
-    @Test(dataProvider = "Search", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase20, groups = {"regression"})
+    @Test(dataProvider = "Search", groups = {"regression"})
     public void testDefaultDropdownTestCase4(String minAge, String maxAge, String sortBy) {
         int min = Integer.parseInt(minAge);
         int max = Integer.parseInt(maxAge);

@@ -11,6 +11,7 @@ public class SignInTests extends BaseUI {
 
     public void testSignIn(String signinemail, String signinpassword, boolean requirment) {
         signInPage.signInCredentials(signinemail, signinpassword);
+
         driver.findElement(Locators.SUBMIT_SIGNIN).click();
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[@class='error alert-danger alert-warning_pop_']"))));
         if (!requirment) {
